@@ -1,5 +1,5 @@
 -- set leader key to space
-vim.g.mapleader = " "
+-- vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
 
@@ -27,7 +27,7 @@ keymap.set("n", "<leader>sp", "<C-w>=") -- make split windows equal width & heig
 keymap.set("n", "<leader>sk", ":close<CR>") -- close current split window
 
 keymap.set("n", "<leader>ti", ":tabnew<CR>") -- open new tab
-keymap.set("n", "<leader>to", ":tabn<CR>") --  go to next tab
+keymap.set("n", "<leader>t", ":tabn<CR>") --  go to next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 keymap.set("n", "<leader>tk", ":tabclose<CR>") -- close current tab
 
@@ -62,3 +62,23 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
+
+-- Vimspector
+vim.cmd([[
+nmap <F9> <cmd>call vimspector#Launch()<cr>
+nmap <F5> <cmd>call vimspector#StepOver()<cr>
+nmap <F8> <cmd>call vimspector#Reset()<cr>
+nmap <F11> <cmd>call vimspector#StepOver()<cr>")
+nmap <F12> <cmd>call vimspector#StepOut()<cr>")
+nmap <F10> <cmd>call vimspector#StepInto()<cr>")
+]])
+keymap.set("n", "Db", ":call vimspector#ToggleBreakpoint()<cr>")
+keymap.set("n", "Dw", ":call vimspector#AddWatch()<cr>")
+keymap.set("n", "De", ":call vimspector#Evaluate()<cr>")
+
+-- Hop
+keymap.set("n", "mk", ":HopLine<CR>")
+keymap.set("n", "ml", ":HopWord<CR>")
+
+-- Tagbar
+keymap.set("n", "<leader>q", ":TagbarToggle<CR>")

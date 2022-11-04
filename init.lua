@@ -16,3 +16,10 @@ require("Junzhe.plugins.treesitter")
 require("Junzhe.plugins.gitsigns")
 require("Junzhe.plugins.floaterm")
 require("Junzhe.plugins.indentline")
+
+-- ============================== --
+--          RUST CONFIG
+-- ============================== --
+require("Junzhe.plugins.lsp.specific_language.rust_config")
+require("Junzhe.plugins.lsp.specific_language.rust_diagnostic")
+require("Junzhe.plugins.lsp.specific_language.rust_opt")

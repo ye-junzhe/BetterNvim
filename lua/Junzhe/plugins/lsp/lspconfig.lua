@@ -135,10 +135,10 @@ lspconfig["solargraph"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-lspconfig["rust_analyzer"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
+-- lspconfig["rust_analyzer"].setup({
+-- 	capabilities = capabilities,
+-- 	on_attach = on_attach,
+-- })
 lspconfig["taplo"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
@@ -147,18 +147,3 @@ lspconfig["yamlls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-
--- 	formatting = {
--- 		fields = { "menu", "abbr", "kind" },
--- 		format = function(entry, item)
--- 			local menu_icon = {
--- 				nvim_lsp = "λ",
--- 				vsnip = "⋗",
--- 				buffer = "Ω",
--- 				path = "🖫",
--- 			}
--- 			item.menu = menu_icon[entry.source.name]
--- 			return item
--- 		end,
--- 	},
--- })

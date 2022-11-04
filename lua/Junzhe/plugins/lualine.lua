@@ -7,6 +7,9 @@ end
 -- get lualine nightfly theme
 local lualine_nightfly = require("lualine.themes.nightfly")
 
+-- get lualine molokai theme
+local lualine_molokai = require("lualine.themes.molokai")
+
 -- new colors for theme
 local new_colors = {
 	blue = "#65D1FF",
@@ -31,6 +34,6 @@ lualine_nightfly.command = {
 -- configure lualine with modified theme
 lualine.setup({
 	options = {
-		theme = lualine_nightfly,
+		theme = lualine_molokai,
 	},
 })

@@ -1,5 +1,4 @@
 local opt = vim.opt -- for conciseness
-local api = vim.api -- set updatetime for CursorHold
 local cmd = vim.cmd
 
 -- line numbers
@@ -42,37 +41,10 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 opt.iskeyword:append("-") -- consider string-string as whole word
 
--- ============================== --
---          RUST CONFIG
--- ============================== --
-
---Set completeopt to have a better completion experience
--- :help completeopt
--- menuone: popup even when there's only one match
--- noinsert: Do not insert text until a selection is made
--- noselect: Do not select, force to select one from the menu
--- shortness: avoid showing extra messages when using completion
--- updatetime: set updatetime for CursorHold
-opt.completeopt = { "menuone", "noselect", "noinsert" }
-opt.shortmess = vim.opt.shortmess + { c = true }
-api.nvim_set_option("updatetime", 300)
-
--- Fixed column for diagnostics to appear
--- Show autodiagnostic popup on cursor hover_range
--- Goto previous / next diagnostic warning / error
--- Show inlay_hints more frequently
-cmd([[
-set signcolumn=yes
-autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
-]])
-
-cmd([[
-    set mousescroll=ver:1,hor:1
-
-    set foldmethod=indent   
-    set foldnestmax=10
-    set nofoldenable
-    set foldlevel=2
-
-    set wrap
+-- Vimspector options
+-- Vimspector options
+vim.cmd([[
+let g:vimspector_sidebar_width = 85
+let g:vimspector_bottombar_height = 15
+let g:vimspector_terminal_maxwidth = 70
 ]])

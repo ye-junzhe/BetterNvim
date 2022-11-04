@@ -112,11 +112,58 @@ return packer.startup({
 		--  vertical lines at each indentation level for code indented with spaces
 		use("lukas-reineke/indent-blankline.nvim")
 
+		-- rust-tools
+		use("simrat39/rust-tools.nvim")
+
+		-- vimspector
+		use("puremourning/vimspector")
+
+		-- hop
+		use({
+			"phaazon/hop.nvim",
+			branch = "v2",
+			config = function()
+				require("hop").setup({})
+			end,
+		})
+
+		-- monokai colorscheme
+		use("tanvirtin/monokai.nvim")
+
+		-- for an overview of my project structure
+		use("preservim/tagbar")
+
+		-- TODO tree
+		use({
+			"folke/todo-comments.nvim",
+			requires = "nvim-lua/plenary.nvim",
+			config = function()
+				require("todo-comments").setup({
+					-- your configuration comes here
+					-- or leave it empty to use the default settings
+					-- refer to the configuration section below
+				})
+			end,
+		})
+
+		-- Trouble
+		use({
+			"folke/trouble.nvim",
+			requires = "kyazdani42/nvim-web-devicons",
+			config = function()
+				require("trouble").setup({
+					-- your configuration comes here
+					-- or leave it empty to use the default settings
+					-- refer to the configuration section below
+				})
+			end,
+		})
+
 		if packer_bootstrap then
 			require("packer").sync()
 		end
 	end,
-	-- Using floating window
+	-- using floating window
 	config = {
 		display = {
 			open_fn = function()

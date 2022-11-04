@@ -69,7 +69,15 @@ cmp.setup({
 		{ name = "luasnip" }, -- snippets
 		{ name = "buffer" }, -- text within current buffer
 		{ name = "path" }, -- file system paths
+		{ name = "nvim_lsp_signature_help" }, -- display function signatures with current parameter emphasized
+		{ name = "nvim_lua", keyword_length = 2 }, -- complete neovim's Lua runtime API such vim.lsp.*
+		{ name = "vsnip", keyword_length = 2 }, -- nvim-cmp source for vim-vsnip
+		{ name = "calc" }, -- source for math calculation
 	}),
+	window = {
+		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
+	},
 	-- configure lspkind for vs-code like icons
 	formatting = {
 		format = lspkind.cmp_format({
