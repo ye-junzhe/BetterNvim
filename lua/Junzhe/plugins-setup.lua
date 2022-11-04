@@ -66,6 +66,11 @@ return packer.startup({
 		use("hrsh7th/cmp-buffer") -- source for text in buffer
 		use("hrsh7th/cmp-path") -- source for file system paths
 
+		use("hrsh7th/vim-vsnip") -- VSCode(LSP)'s snippet feature in vim/nvim.
+		use("hrsh7th/cmp-nvim-lua")
+		use("hrsh7th/cmp-nvim-lsp-signature-help")
+		use("hrsh7th/cmp-vsnip")
+
 		-- snippets
 		use("L3MON4D3/LuaSnip") -- snippet engine
 		use("saadparwaiz1/cmp_luasnip") -- for autocompletion
@@ -100,6 +105,12 @@ return packer.startup({
 
 		-- git integration
 		use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
+
+		-- float terminal
+		use("voldikss/vim-floaterm")
+
+		--  vertical lines at each indentation level for code indented with spaces
+		use("lukas-reineke/indent-blankline.nvim")
 
 		if packer_bootstrap then
 			require("packer").sync()

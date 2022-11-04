@@ -31,6 +31,12 @@ keymap.set("n", "<leader>to", ":tabn<CR>") --  go to next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 keymap.set("n", "<leader>tk", ":tabclose<CR>") -- close current tab
 
+-- 替换方向键为调节分屏大小
+keymap.set("n", "<up>", ":res -5<CR>")
+keymap.set("n", "<down>", ":res +5<CR>")
+keymap.set("n", "<left>", ":vertical resize+5<CR>")
+keymap.set("n", "<right>", ":vertical resize-5<CR>")
+
 ----------------------
 -- Plugin Keybinds
 ----------------------

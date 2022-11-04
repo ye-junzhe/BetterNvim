@@ -38,8 +38,26 @@ cmp.setup({
 		["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
 		["<C-b>"] = cmp.mapping.scroll_docs(-4),
 		["<C-f>"] = cmp.mapping.scroll_docs(4),
-		["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
+		["<Tab>"] = cmp.mapping(function(fallback)
+			if cmp.visible() then
+				cmp.select_next_item()
+			elseif luasnip.expandable() then
+				luasnip.expand({})
+			elseif jumpable() then
+				luasnip.jump(1)
+			elseif check_backspace() then
+				fallback()
+			elseif is_emmet_active() then
+				return vim.fn["cmp#complete"]()
+			else
+				fallback()
+			end
+		end, {
+			"i",
+			"s",
+		}),
 		["<C-e>"] = cmp.mapping.abort(), -- close completion window
+
 		["<CR>"] = cmp.mapping.confirm({ select = false }),
 	}),
 	-- sources for autocompletion
