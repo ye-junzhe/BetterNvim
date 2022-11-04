@@ -41,12 +41,25 @@ cmp.setup({
 		["<Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_next_item()
+			else
+				fallback()
 			end
 		end, {
 			"i",
 			"s",
 		}),
-		["<C-e>"] = cmp.mapping.abort(), -- close completion window
+
+		["<leader><Tab>"] = cmp.mapping(function(fallback)
+			if cmp.visible() then
+				cmp.select_prev_item()
+			else
+				fallback()
+			end
+		end, {
+			"i",
+			"s",
+		}),
+		["<Esc>"] = cmp.mapping.abort(), -- close completion window
 
 		["<CR>"] = cmp.mapping.confirm({ select = false }),
 	}),
