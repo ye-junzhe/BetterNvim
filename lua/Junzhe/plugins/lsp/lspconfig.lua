@@ -34,7 +34,7 @@ local on_attach = function(client, bufnr)
 	keymap.set("n", "<leader>d", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opts) -- show diagnostics for cursor
 	keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to previous diagnostic in buffer
 	keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
-	keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
+	keymap.set("n", "gh", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
 	keymap.set("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", opts) -- see outline on right hand side
 
 	-- typescript specific keymaps (e.g. rename file and update imports)
@@ -101,7 +101,7 @@ lspconfig["sumneko_lua"].setup({
 			},
 		},
 	},
-}) 
+})
 
 lspconfig["clangd"].setup({
 	capabilities = capabilities,
@@ -142,9 +142,8 @@ lspconfig["rust_analyzer"].setup({
 lspconfig["taplo"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
-}) 
+})
 lspconfig["yamlls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-
