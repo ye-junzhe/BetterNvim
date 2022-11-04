@@ -68,4 +68,11 @@ autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 
 cmd([[
     set mousescroll=ver:1,hor:1
+
+    set foldmethod=indent   
+    set foldnestmax=10
+    set nofoldenable
+    set foldlevel=2
+
+    set wrap
 ]])

@@ -41,16 +41,6 @@ cmp.setup({
 		["<Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_next_item()
-			elseif luasnip.expandable() then
-				luasnip.expand({})
-			elseif jumpable() then
-				luasnip.jump(1)
-			elseif check_backspace() then
-				fallback()
-			elseif is_emmet_active() then
-				return vim.fn["cmp#complete"]()
-			else
-				fallback()
 			end
 		end, {
 			"i",
