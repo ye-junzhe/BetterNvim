@@ -1,5 +1,5 @@
 -- set leader key to space
--- vim.g.mapleader = " "
+vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
 
@@ -42,7 +42,7 @@ keymap.set("n", "<right>", ":vertical resize-5<CR>")
 ----------------------
 
 -- vim-maximizer
-keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
+keymap.set("n", "<leader>m", ":MaximizerToggle<CR>") -- toggle split window maximization
 
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer

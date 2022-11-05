@@ -48,3 +48,14 @@ let g:vimspector_sidebar_width = 85
 let g:vimspector_bottombar_height = 15
 let g:vimspector_terminal_maxwidth = 70
 ]])
+
+cmd([[
+    set mousescroll=ver:1,hor:1
+
+    set foldmethod=indent   
+    set foldnestmax=10
+    set nofoldenable
+    set foldlevel=2
+
+    set wrap
+]])

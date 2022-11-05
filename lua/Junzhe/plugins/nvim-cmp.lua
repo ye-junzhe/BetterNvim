@@ -30,7 +30,8 @@ vim.api.nvim_create_autocmd("BufEnter", {
 cmp.setup({
 	snippet = {
 		expand = function(args)
-			luasnip.lsp_expand(args.body)
+			-- luasnip.lsp_expand(args.body)
+			vim.fn["vsnip#anonymous"](args.body)
 		end,
 	},
 	mapping = cmp.mapping.preset.insert({
@@ -59,8 +60,7 @@ cmp.setup({
 			"i",
 			"s",
 		}),
-		["<Esc>"] = cmp.mapping.abort(), -- close completion window
-
+		-- ["<Esc>"] = cmp.mapping.abort(), -- close completion window
 		["<CR>"] = cmp.mapping.confirm({ select = false }),
 	}),
 	-- sources for autocompletion
