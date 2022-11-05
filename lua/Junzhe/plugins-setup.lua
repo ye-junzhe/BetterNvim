@@ -153,7 +153,7 @@ return packer.startup({
 		use({ "ellisonleao/gruvbox.nvim" })
 
 		--  inlayhints
-		use("lvimuser/lsp-inlayhints.nvim")
+		-- use("lvimuser/lsp-inlayhints.nvim")
 
 		-- nvim start screen
 		use({
@@ -164,11 +164,21 @@ return packer.startup({
 			end,
 		})
 
-        -- catppuccin color theme 
-        use { "catppuccin/nvim", as = "catppuccin" }
+		-- catppuccin color theme
+		use({ "catppuccin/nvim", as = "catppuccin" })
 
-        -- tokyo night color theme
-        use ("folke/tokyonight.nvim")
+		-- tokyo night color theme
+		use("folke/tokyonight.nvim")
+
+		-- bufferline
+		use({
+			"akinsho/bufferline.nvim",
+			tag = "v3.*",
+			requires = "kyazdani42/nvim-web-devicons",
+			-- config = function()
+			-- 	require("bufferline").setup({})
+			-- end,
+		})
 
 		if packer_bootstrap then
 			require("packer").sync()
