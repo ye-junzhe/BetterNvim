@@ -134,17 +134,7 @@ return packer.startup({
 		use("preservim/tagbar")
 
 		-- TODO tree
-		use({
-			"folke/todo-comments.nvim",
-			requires = "nvim-lua/plenary.nvim",
-			config = function()
-				require("todo-comments").setup({
-					-- your configuration comes here
-					-- or leave it empty to use the default settings
-					-- refer to the configuration section below
-				})
-			end,
-		})
+		use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" })
 
 		-- -- Trouble
 		-- use({
@@ -164,6 +154,15 @@ return packer.startup({
 
 		--  inlayhints
 		use("lvimuser/lsp-inlayhints.nvim")
+
+		-- nvim start screen
+		use({
+			"startup-nvim/startup.nvim",
+			requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+			config = function()
+				require("startup").setup({ theme = "Evil" })
+			end,
+		})
 
 		if packer_bootstrap then
 			require("packer").sync()

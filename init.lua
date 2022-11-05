@@ -16,6 +16,7 @@ require("Junzhe.plugins.treesitter")
 require("Junzhe.plugins.gitsigns")
 require("Junzhe.plugins.floaterm")
 require("Junzhe.plugins.indentline")
+require("Junzhe.plugins.todotree")
 
 -- ============================== --
 --          RUST CONFIG
