@@ -40,7 +40,7 @@ local new_colors = {
 -- configure lualine with modified theme
 lualine.setup({
 	options = {
-		theme = lualine_gruvbox,
+		theme = "catppuccin",
 	},
 	sections = {
 		lualine_a = {

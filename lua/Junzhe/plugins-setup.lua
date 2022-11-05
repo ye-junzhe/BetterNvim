@@ -164,6 +164,12 @@ return packer.startup({
 			end,
 		})
 
+        -- catppuccin color theme 
+        use { "catppuccin/nvim", as = "catppuccin" }
+
+        -- tokyo night color theme
+        use ("folke/tokyonight.nvim")
+
 		if packer_bootstrap then
 			require("packer").sync()
 		end
