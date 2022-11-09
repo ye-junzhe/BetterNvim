@@ -18,6 +18,7 @@ require("Junzhe.plugins.floaterm")
 require("Junzhe.plugins.indentline")
 require("Junzhe.plugins.todotree")
 require("Junzhe.plugins.bufferline")
+require("Junzhe.plugins.wilder")
 
 -- ============================== --
 --          RUST CONFIG

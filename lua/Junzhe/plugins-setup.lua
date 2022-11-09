@@ -180,6 +180,23 @@ return packer.startup({
 			-- end,
 		})
 
+		-- image viewer
+		use({
+			"edluffy/hologram.nvim",
+			config = function()
+				require("hologram").setup({ auto_display = true })
+			end,
+		})
+
+		-- command mode autocompletion
+		use({ "gelguy/wilder.nvim" })
+
+		-- glsl viewer
+		-- use({ "timtro/glslView-nvim", ft = "glsl" })
+
+		-- LaTeX Generator
+		use("lervag/vimtex")
+
 		if packer_bootstrap then
 			require("packer").sync()
 		end

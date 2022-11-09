@@ -39,6 +39,8 @@ treesitter.setup({
 		"gitignore",
 		"rust",
 		"toml",
+		"glsl",
+		"latex",
 	},
 	-- auto install above language parsers
 	auto_install = true,
