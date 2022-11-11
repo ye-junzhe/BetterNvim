@@ -181,12 +181,12 @@ return packer.startup({
 		})
 
 		-- image viewer
-		use({
-			"edluffy/hologram.nvim",
-			config = function()
-				require("hologram").setup({ auto_display = true })
-			end,
-		})
+		-- use({
+		-- 	"edluffy/hologram.nvim",
+		-- 	config = function()
+		-- 		require("hologram").setup({ auto_display = true })
+		-- 	end,
+		-- })
 
 		-- command mode autocompletion
 		use({ "gelguy/wilder.nvim" })
@@ -195,7 +195,10 @@ return packer.startup({
 		-- use({ "timtro/glslView-nvim", ft = "glsl" })
 
 		-- LaTeX Generator
-		use("lervag/vimtex")
+		-- use("lervag/vimtex")
+
+		-- view git diff
+		use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
 
 		if packer_bootstrap then
 			require("packer").sync()

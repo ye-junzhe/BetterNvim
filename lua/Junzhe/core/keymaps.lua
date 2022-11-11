@@ -82,3 +82,6 @@ keymap.set("n", "ml", ":HopWord<CR>")
 
 -- Tagbar
 keymap.set("n", "<leader>q", ":TagbarToggle<CR>")
+
+-- diffview
+keymap.set("n", "<leader>fd", ":DiffviewFileHistory<CR>")

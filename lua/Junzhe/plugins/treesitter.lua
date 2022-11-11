@@ -41,6 +41,7 @@ treesitter.setup({
 		"toml",
 		"glsl",
 		"latex",
+		"cpp",
 	},
 	-- auto install above language parsers
 	auto_install = true,
