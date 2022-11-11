@@ -205,6 +205,11 @@ _G.packer_plugins = {
     path = "/Users/mcf4r/.local/share/nvim/site/pack/packer/start/monokai.nvim",
     url = "https://github.com/tanvirtin/monokai.nvim"
   },
+  ["neovim-tasks"] = {
+    loaded = true,
+    path = "/Users/mcf4r/.local/share/nvim/site/pack/packer/start/neovim-tasks",
+    url = "https://github.com/Shatur/neovim-tasks"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/Users/mcf4r/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
