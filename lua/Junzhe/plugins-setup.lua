@@ -203,6 +203,29 @@ return packer.startup({
 		-- view git diff
 		use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
 
+		-- winbar
+		use({
+			"fgheng/winbar.nvim",
+			config = function()
+				require("winbar").setup({})
+			end,
+		})
+
+		use({
+			"folke/noice.nvim",
+			config = function()
+				require("noice").setup()
+			end,
+			requires = {
+				-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+				"MunifTanjim/nui.nvim",
+				-- OPTIONAL:
+				--   `nvim-notify` is only needed, if you want to use the notification view.
+				--   If not available, we use `mini` as the fallback
+				"rcarriga/nvim-notify",
+			},
+		})
+
 		if packer_bootstrap then
 			require("packer").sync()
 		end
