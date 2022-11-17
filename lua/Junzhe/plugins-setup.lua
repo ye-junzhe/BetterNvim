@@ -226,6 +226,9 @@ return packer.startup({
 			},
 		})
 
+		-- install without yarn or npm
+		use({ "iamcco/markdown-preview.nvim" })
+
 		if packer_bootstrap then
 			require("packer").sync()
 		end

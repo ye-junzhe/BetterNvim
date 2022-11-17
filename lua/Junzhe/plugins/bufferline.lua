@@ -1,15 +1,32 @@
 local bufferline = require("bufferline")
+local mocha = require("catppuccin.palettes").get_palette("mocha")
 
 bufferline.setup({
 	options = {
+		after = "catppuccin",
+		highlights = {
+			require("catppuccin.groups.integrations.bufferline").get(),
+			styles = { "italic", "bold" },
+			custom = {
+				all = {
+					fill = { bg = "#000000" },
+				},
+				mocha = {
+					background = { fg = mocha.text },
+				},
+				latte = {
+					background = { fg = "#000000" },
+				},
+			},
+		},
 		mode = "buffers", -- set to "tabs" to only show tabpages instead
 		numbers = "both",
 		close_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"
 		right_mouse_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"
 		left_mouse_command = "buffer %d", -- can be a string | function, see "Mouse actions"
-		middle_mouse_command = nil, -- can be a string | function, see "Mouse actions"
 		indicator = {
-			style = "underline",
+			icon = "▎",
+			style = "icon",
 		},
 		buffer_close_icon = "",
 		modified_icon = "●",
@@ -40,6 +57,14 @@ bufferline.setup({
 		},
 		sort_by = {
 			"insert_after_current",
+		},
+		offsets = {
+			{
+				filetype = "NvimTree",
+				text = "File Explorer",
+				highlight = "Directory",
+				separator = true, -- use a "true" to enable the default, or set your own character
+			},
 		},
 	},
 })

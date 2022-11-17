@@ -169,6 +169,17 @@ lspconfig["rust_analyzer"].setup({
 			procMacro = {
 				enable = true,
 			},
+			inlayHints = {
+				bindingModeHints = {
+					enable = true,
+				},
+				chainingHints = {
+					enable = true,
+				},
+				closingBraceHints = {
+					enable = true,
+				},
+			},
 		},
 	},
 })

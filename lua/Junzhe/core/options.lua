@@ -58,4 +58,5 @@ cmd([[
     set foldlevel=2
 
     set wrap
+    set winbar=%=%m\ %f
 ]])
