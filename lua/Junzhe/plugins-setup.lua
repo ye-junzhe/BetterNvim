@@ -238,6 +238,16 @@ return packer.startup({
 		-- beacon show jump cursor line
 		use("danilamihailov/beacon.nvim")
 
+		-- crates
+		use({
+			"saecki/crates.nvim",
+			tag = "v0.3.0",
+			requires = { "nvim-lua/plenary.nvim" },
+			config = function()
+				require("crates").setup()
+			end,
+		})
+
 		if packer_bootstrap then
 			require("packer").sync()
 		end
