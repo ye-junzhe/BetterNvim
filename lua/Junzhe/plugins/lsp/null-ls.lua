@@ -23,7 +23,7 @@ null_ls.setup({
 		formatting.rubocop,
 		formatting.markdownlint,
 		formatting.csharpier,
-		formatting.rustfmt,
+		-- formatting.rustfmt,
 		markdown_diag.markdownlint,
 		diagnostics.eslint_d.with({ -- js/ts linter
 			-- only enable eslint if root has .eslintrc.js (not in youtube nvim video)

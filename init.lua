@@ -20,11 +20,10 @@ require("Junzhe.plugins.todotree")
 require("Junzhe.plugins.bufferline")
 require("Junzhe.plugins.wilder")
 require("Junzhe.plugins.tasks")
-require("Junzhe.plugins.markdown")
 
 -- ============================== --
 --          RUST CONFIG
 -- ============================== --
--- require("Junzhe.plugins.lsp.specific_language.rust_config")
--- require("Junzhe.plugins.lsp.specific_language.rust_diagnostic")
--- require("Junzhe.plugins.lsp.specific_language.rust_opt")
+require("Junzhe.plugins.lsp.specific_language.rust_config")
+require("Junzhe.plugins.lsp.specific_language.rust_diagnostic")
+require("Junzhe.plugins.lsp.specific_language.rust_opt")

@@ -229,6 +229,15 @@ return packer.startup({
 		-- install without yarn or npm
 		use({ "iamcco/markdown-preview.nvim" })
 
+		-- more highlights
+		use({
+			"m-demare/hlargs.nvim",
+			requires = { "nvim-treesitter/nvim-treesitter" },
+		})
+
+		-- beacon show jump cursor line
+		use("danilamihailov/beacon.nvim")
+
 		if packer_bootstrap then
 			require("packer").sync()
 		end
