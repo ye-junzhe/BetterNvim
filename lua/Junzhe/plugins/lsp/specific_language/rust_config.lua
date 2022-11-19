@@ -172,7 +172,17 @@ local opts = {
 	},
 }
 
-rust_tools.setup(opts)
+rust_tools.setup({
+	opts,
+	server = {
+		on_attach = function(_, bufnr)
+			-- Hover actions
+			vim.keymap.set("n", "<C-space>", rust_tools.hover_actions.hover_actions, { buffer = bufnr })
+			-- Code action groups
+			vim.keymap.set("n", "<Leader>a", rust_tools.code_action_group.code_action_group, { buffer = bufnr })
+		end,
+	},
+})
 -- Commands:
 -- RustEnableInlayHints
 -- RustDisableInlayHints
@@ -191,5 +201,3 @@ rust_tools.inlay_hints.enable()
 
 rust_tools.hover_actions.hover_actions()
 rust_tools.hover_range.hover_range()
-
-rust_tools.crate_graph.view_crate_graph(backend, output)
