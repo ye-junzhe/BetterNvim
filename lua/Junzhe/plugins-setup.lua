@@ -248,6 +248,12 @@ return packer.startup({
 			end,
 		})
 
+		-- lazygit
+		-- use({
+		-- 	"kdheepak/lazygit.nvim",
+		-- 	vim.keymap.set("n", "<leader>lg", ":LazyGit<CR>"),
+		-- })
+
 		if packer_bootstrap then
 			require("packer").sync()
 		end
