@@ -7,8 +7,13 @@ local keymap = vim.keymap -- for conciseness
 -- General Keymaps
 ---------------------
 
--- use jk to exit insert mode
--- keymap.set("i", "jk", "<ESC>")
+-- use jk to exit insert mode and save
+keymap.set("i", "jk", "<ESC>:w<CR>")
+-- keymap.set("i", "<leader>s", "<ESC>:w<CR>")
+keymap.set("n", "<leader>s", ":w<CR>")
+keymap.set("n", "<leader>sq", ":q<CR>")
+-- keymap.set("i", "<leader>l", "<ESC>:w<CR>")
+-- keymap.set("n", "<leader>l", ":w<CR>")
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>")
@@ -85,6 +90,7 @@ keymap.set("n", "<F12>", ":call vimspector#Reset()<CR>")
 
 -- Hop
 keymap.set("n", "<leader>j", ":HopLine<CR>")
+keymap.set("n", "mk", ":HopPattern<CR>")
 keymap.set("n", "ml", ":HopWord<CR>")
 
 -- Tagbar

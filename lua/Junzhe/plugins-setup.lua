@@ -191,9 +191,6 @@ return packer.startup({
 		-- command mode autocompletion
 		use({ "gelguy/wilder.nvim" })
 
-		-- glsl viewer
-		-- use({ "timtro/glslView-nvim", ft = "glsl" })
-
 		-- LaTeX Generator
 		-- use("lervag/vimtex")
 
