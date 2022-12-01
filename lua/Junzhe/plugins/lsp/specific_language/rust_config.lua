@@ -3,17 +3,6 @@ if not status then
 	return
 end
 
--- rust_tools.setup({
--- 	server = {
--- 		on_attach = function(_, bufnr)
--- 			-- Hover actions
--- 			vim.keymap.set("n", "<C-space>", rust_tools.hover_actions.hover_actions, { buffer = bufnr })
--- 			-- Code action groups
--- 			vim.keymap.set("n", "<Leader>a", rust_tools.code_action_group.code_action_group, { buffer = bufnr })
--- 		end,
--- 	},
--- })
-
 local opts = {
 	tools = { -- rust-tools options
 
@@ -183,7 +172,17 @@ local opts = {
 	},
 }
 
-rust_tools.setup(opts)
+rust_tools.setup({
+	opts,
+	server = {
+		on_attach = function(_, bufnr)
+			-- Hover actions
+			vim.keymap.set("n", "<C-space>", rust_tools.hover_actions.hover_actions, { buffer = bufnr })
+			-- Code action groups
+			vim.keymap.set("n", "<Leader>a", rust_tools.code_action_group.code_action_group, { buffer = bufnr })
+		end,
+	},
+})
 -- Commands:
 -- RustEnableInlayHints
 -- RustDisableInlayHints
@@ -191,13 +190,14 @@ rust_tools.setup(opts)
 -- RustUnsetInlayHints
 
 -- Set inlay hints for the current buffer
-rust_tools.inlay_hints.set()
+-- rust_tools.inlay_hints.set()
 -- Unset inlay hints for the current buffer
-rust_tools.inlay_hints.unset()
+-- rust_tools.inlay_hints.unset()
 
 -- Enable inlay hints auto update and set them for all the buffers
 rust_tools.inlay_hints.enable()
 -- Disable inlay hints auto update and unset them for all buffers
-rust_tools.inlay_hints.disable()
+-- rust_tools.inlay_hints.disable()
 
 rust_tools.hover_actions.hover_actions()
+rust_tools.hover_range.hover_range()

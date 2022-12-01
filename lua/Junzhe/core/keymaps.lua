@@ -7,8 +7,13 @@ local keymap = vim.keymap -- for conciseness
 -- General Keymaps
 ---------------------
 
--- use jk to exit insert mode
-keymap.set("i", "jk", "<ESC>")
+-- use jk to exit insert mode and save
+keymap.set("i", "jk", "<ESC>:w<CR>")
+-- keymap.set("i", "<leader>s", "<ESC>:w<CR>")
+keymap.set("n", "<leader>s", ":w<CR>")
+keymap.set("n", "<leader>sq", ":q<CR>")
+-- keymap.set("i", "<leader>l", "<ESC>:w<CR>")
+-- keymap.set("n", "<leader>l", ":w<CR>")
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>")
@@ -64,20 +69,28 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
 
 -- Vimspector
-vim.cmd([[
-nmap <F9> <cmd>call vimspector#Launch()<cr>
-nmap <F5> <cmd>call vimspector#StepOver()<cr>
-nmap <F8> <cmd>call vimspector#Reset()<cr>
-nmap <F11> <cmd>call vimspector#StepOver()<cr>")
-nmap <F12> <cmd>call vimspector#StepOut()<cr>")
-nmap <F10> <cmd>call vimspector#StepInto()<cr>")
-]])
 keymap.set("n", "Db", ":call vimspector#ToggleBreakpoint()<cr>")
 keymap.set("n", "Dw", ":call vimspector#AddWatch()<cr>")
 keymap.set("n", "De", ":call vimspector#Evaluate()<cr>")
 
+keymap.set("n", "<F7>", ":call vimspector#Launch()<CR>")
+keymap.set("n", "<F8>", ":call vimspector#StepInto()<CR>")
+keymap.set("n", "<F9>", ":call vimspector#StepOut()<CR>")
+keymap.set("n", "<F10>", ":call vimspector#StepOver()<CR>")
+keymap.set("n", "<F12>", ":call vimspector#Reset()<CR>")
+
+-- vim.cmd([[
+-- " nmap <F9> <cmd>call vimspector#Launch()<cr>
+-- " nmap <F5> <cmd>call vimspector#StepOver()<cr>
+-- " nmap <F8> <cmd>call vimspector#Reset()<cr>
+-- " nmap <F11> <cmd>call vimspector#StepOver()<cr>")
+-- " nmap <F12> <cmd>call vimspector#StepOut()<cr>")
+-- " nmap <F10> <cmd>call vimspector#StepInto()<cr>")
+-- ]])
+
 -- Hop
-keymap.set("n", "mk", ":HopLine<CR>")
+keymap.set("n", "<leader>j", ":HopLine<CR>")
+keymap.set("n", "mk", ":HopPattern<CR>")
 keymap.set("n", "ml", ":HopWord<CR>")
 
 -- Tagbar

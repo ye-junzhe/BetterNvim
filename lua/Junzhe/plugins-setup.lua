@@ -191,9 +191,6 @@ return packer.startup({
 		-- command mode autocompletion
 		use({ "gelguy/wilder.nvim" })
 
-		-- glsl viewer
-		-- use({ "timtro/glslView-nvim", ft = "glsl" })
-
 		-- LaTeX Generator
 		-- use("lervag/vimtex")
 
@@ -228,6 +225,31 @@ return packer.startup({
 
 		-- install without yarn or npm
 		use({ "iamcco/markdown-preview.nvim" })
+
+		-- more highlights
+		use({
+			"m-demare/hlargs.nvim",
+			requires = { "nvim-treesitter/nvim-treesitter" },
+		})
+
+		-- beacon show jump cursor line
+		use("danilamihailov/beacon.nvim")
+
+		-- crates
+		use({
+			"saecki/crates.nvim",
+			tag = "v0.3.0",
+			requires = { "nvim-lua/plenary.nvim" },
+			config = function()
+				require("crates").setup()
+			end,
+		})
+
+		-- lazygit
+		-- use({
+		-- 	"kdheepak/lazygit.nvim",
+		-- 	vim.keymap.set("n", "<leader>lg", ":LazyGit<CR>"),
+		-- })
 
 		if packer_bootstrap then
 			require("packer").sync()

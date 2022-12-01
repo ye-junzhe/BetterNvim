@@ -5,6 +5,13 @@ end
 
 local keymap = vim.keymap
 
+-- PERF:
+-- HACK:
+-- TODO:
+-- NOTE:
+-- FIX:
+-- WARNING:
+
 todotree.setup({
 	keymap.set("n", "]t", function()
 		require("todo-comments").jump_next()

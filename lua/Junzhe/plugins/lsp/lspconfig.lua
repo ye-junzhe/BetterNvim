@@ -16,7 +16,31 @@ if not typescript_setup then
 	return
 end
 
+local rt = require("rust-tools")
 local keymap = vim.keymap -- for conciseness
+
+rt.setup({
+	server = {
+		on_attach = function(_, bufnr)
+			local opts = { noremap = true, silent = true, buffer = bufnr }
+			-- Hover actions
+			vim.keymap.set("n", "gh", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
+			-- vim.keymap.set("n", "gh", rt.hover_actions.hover_actions, { buffer = bufnr })
+			-- Code action groups
+			-- vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+			-- lsp_finder
+			keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts) -- show definition, references
+			keymap.set("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts) -- got to declaration
+			keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts) -- see definition and make edits in window
+			keymap.set("n", "<leader>a", "<cmd>Lspsaga code_action<CR>", opts) -- see available code actions
+			keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts) -- smart rename
+			keymap.set("n", "<leader>k", "<cmd>Lspsaga show_line_diagnostics<CR>", opts) -- show  diagnostics for line
+			keymap.set("n", "<leader>d", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opts) -- show diagnostics for cursor
+			keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to previous diagnostic in buffer
+			keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
+		end,
+	},
+})
 
 -- enable keybinds only for when lsp server available
 local on_attach = function(client, bufnr)
@@ -28,9 +52,9 @@ local on_attach = function(client, bufnr)
 	keymap.set("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts) -- got to declaration
 	keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts) -- see definition and make edits in window
 	keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- go to implementation
-	keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts) -- see available code actions
+	keymap.set("n", "<leader>a", "<cmd>Lspsaga code_action<CR>", opts) -- see available code actions
 	keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts) -- smart rename
-	keymap.set("n", "<leader>d", "<cmd>Lspsaga show_line_diagnostics<CR>", opts) -- show  diagnostics for line
+	keymap.set("n", "<leader>D", "<cmd>Lspsaga show_line_diagnostics<CR>", opts) -- show  diagnostics for line
 	keymap.set("n", "<leader>d", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opts) -- show diagnostics for cursor
 	keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to previous diagnostic in buffer
 	keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
@@ -45,20 +69,6 @@ local on_attach = function(client, bufnr)
 		keymap.set("n", "<leader>ru", ":TypescriptRemoveUnused<CR>") -- remove unused variables (not in youtube nvim video)
 	end
 end
-
--- vim.api.nvim_create_augroup("LspAttach_inlayhints", {})
--- vim.api.nvim_create_autocmd("LspAttach", {
--- 	group = "LspAttach_inlayhints",
--- 	callback = function(args)
--- 		if not (args.data and args.data.client_id) then
--- 			return
--- 		end
---
--- 		local bufnr = args.buf
--- 		local client = vim.lsp.get_client_by_id(args.data.client_id)
--- 		require("lsp-inlayhints").on_attach(client, bufnr)
--- 	end,
--- })
 
 -- used to enable autocompletion (assign to every lsp server config)
 local capabilities = cmp_nvim_lsp.default_capabilities()
@@ -150,39 +160,39 @@ lspconfig["solargraph"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-lspconfig["rust_analyzer"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-	settings = {
-		rust = {
-			imports = {
-				granularity = {
-					group = "module",
-				},
-				prefix = "self",
-			},
-			cargo = {
-				buildScripts = {
-					enable = true,
-				},
-			},
-			procMacro = {
-				enable = true,
-			},
-			inlayHints = {
-				bindingModeHints = {
-					enable = true,
-				},
-				chainingHints = {
-					enable = true,
-				},
-				closingBraceHints = {
-					enable = true,
-				},
-			},
-		},
-	},
-})
+-- lspconfig["rust_analyzer"].setup({
+-- 	capabilities = capabilities,
+-- 	on_attach = on_attach,
+-- 	settings = {
+-- 		rust = {
+-- 			imports = {
+-- 				granularity = {
+-- 					group = "module",
+-- 				},
+-- 				prefix = "self",
+-- 			},
+-- 			cargo = {
+-- 				buildScripts = {
+-- 					enable = true,
+-- 				},
+-- 			},
+-- 			procMacro = {
+-- 				enable = true,
+-- 			},
+-- 			inlayHints = {
+-- 				bindingModeHints = {
+-- 					enable = true,
+-- 				},
+-- 				chainingHints = {
+-- 					enable = true,
+-- 				},
+-- 				closingBraceHints = {
+-- 					enable = true,
+-- 				},
+-- 			},
+-- 		},
+-- 	},
+-- })
 lspconfig["taplo"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
