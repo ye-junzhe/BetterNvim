@@ -251,6 +251,12 @@ return packer.startup({
 		-- 	vim.keymap.set("n", "<leader>lg", ":LazyGit<CR>"),
 		-- })
 
+		-- nvim-gps show signatures
+		use({
+			"SmiteshP/nvim-gps",
+			requires = "nvim-treesitter/nvim-treesitter",
+		})
+
 		if packer_bootstrap then
 			require("packer").sync()
 		end

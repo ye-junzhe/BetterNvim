@@ -20,6 +20,7 @@ require("Junzhe.plugins.todotree")
 require("Junzhe.plugins.bufferline")
 require("Junzhe.plugins.wilder")
 require("Junzhe.plugins.tasks")
+require("Junzhe.plugins.gps")
 
 -- ============================== --
 --          RUST CONFIG
