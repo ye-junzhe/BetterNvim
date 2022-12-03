@@ -16,12 +16,16 @@ if not typescript_setup then
 	return
 end
 
+local navic = require("nvim-navic")
+
 local rt = require("rust-tools")
 local keymap = vim.keymap -- for conciseness
 
 rt.setup({
 	server = {
 		on_attach = function(_, bufnr)
+			navic.attach(_, bufnr)
+
 			local opts = { noremap = true, silent = true, buffer = bufnr }
 			-- Hover actions
 			vim.keymap.set("n", "gh", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
@@ -44,6 +48,10 @@ rt.setup({
 
 -- enable keybinds only for when lsp server available
 local on_attach = function(client, bufnr)
+	if client.server_capabilities.documentSymbolProvider then
+		navic.attach(client, bufnr)
+	end
+
 	-- keybind options
 	local opts = { noremap = true, silent = true, buffer = bufnr }
 

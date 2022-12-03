@@ -55,12 +55,19 @@ require("catppuccin").setup({
 	color_overrides = {},
 	custom_highlights = {},
 	integrations = {
-		cmp = true,
+		hop = true,
 		gitsigns = true,
+		noice = true,
+		mason = true,
+		cmp = true,
+		treesitter = true,
+		notify = true,
 		nvimtree = true,
 		telescope = true,
-		treesitter = true,
-		-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+		navic = {
+			enabled = true,
+			custom_bg = "NONE",
+		},
 	},
 })
 

@@ -22,6 +22,17 @@ require("Junzhe.plugins.wilder")
 require("Junzhe.plugins.tasks")
 
 -- ============================== --
+--          Neovide
+-- ============================== --
+require("Junzhe.neovide")
+
+-- ============================== --
+--          Context
+-- ============================== --
+-- require("Junzhe.plugins.gps")
+require("Junzhe.plugins.navic")
+
+-- ============================== --
 --          RUST CONFIG
 -- ============================== --
 -- require("Junzhe.plugins.lsp.specific_language.rust_config")

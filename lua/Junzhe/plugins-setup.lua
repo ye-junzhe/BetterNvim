@@ -251,6 +251,18 @@ return packer.startup({
 		-- 	vim.keymap.set("n", "<leader>lg", ":LazyGit<CR>"),
 		-- })
 
+		-- nvim-gps show signatures
+		use({
+			"SmiteshP/nvim-gps",
+			requires = "nvim-treesitter/nvim-treesitter",
+		})
+
+		-- navic better gps? haha seems a indian developed this plugin
+		use({
+			"SmiteshP/nvim-navic",
+			requires = "neovim/nvim-lspconfig",
+		})
+
 		if packer_bootstrap then
 			require("packer").sync()
 		end
