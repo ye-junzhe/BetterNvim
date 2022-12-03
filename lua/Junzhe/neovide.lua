@@ -1,5 +1,5 @@
 vim.cmd([[
-set guifont=MesloLGS\ NF:h18:b:#e-antialias:#h-full
+set guifont=MesloLGS\ NF:h15:b:#e-antialias:#h-full
 let g:neovide_transparency = 0.0
 let g:transparency = 0.8
 let g:neovide_background_color = '#0f1117'.printf('%x', float2nr(255 * g:transparency))
@@ -21,4 +21,6 @@ function! ChangeScaleFactor(delta)
 endfunction
 nnoremap <expr><D-=> ChangeScaleFactor(1.25)
 nnoremap <expr><D--> ChangeScaleFactor(1/1.25)
+
+let g:neovide_remember_window_size = v:true
 ]])
