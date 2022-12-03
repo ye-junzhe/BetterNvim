@@ -257,7 +257,7 @@ return packer.startup({
 			requires = "nvim-treesitter/nvim-treesitter",
 		})
 
-		-- navic better gps?
+		-- navic better gps? haha seems a indian developed this plugin
 		use({
 			"SmiteshP/nvim-navic",
 			requires = "neovim/nvim-lspconfig",

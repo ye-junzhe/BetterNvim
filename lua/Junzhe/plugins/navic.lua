@@ -36,10 +36,14 @@ navic.setup({
 	safe_output = true,
 })
 
-require("lualine").setup({
-	sections = {
-		lualine_c = {
-			{ navic.get_location, cond = navic.is_available },
-		},
-	},
-})
+-- require("lualine").setup({
+-- 	sections = {
+-- 		lualine_c = {
+-- 			{ navic.get_location, cond = navic.is_available },
+-- 		},
+-- 	},
+-- })
+
+-- vim.o.statusline = "%{%v:lua.require'nvim-navic'.get_location()%}"
+--  OR
+vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"

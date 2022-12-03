@@ -60,15 +60,14 @@ require("catppuccin").setup({
 		noice = true,
 		mason = true,
 		cmp = true,
-		navic = true,
 		treesitter = true,
 		notify = true,
 		nvimtree = true,
 		telescope = true,
-	},
-	navic = {
-		enabled = true,
-		custom_bg = "NONE",
+		navic = {
+			enabled = true,
+			custom_bg = "NONE",
+		},
 	},
 })
 
