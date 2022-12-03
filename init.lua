@@ -20,6 +20,15 @@ require("Junzhe.plugins.todotree")
 require("Junzhe.plugins.bufferline")
 require("Junzhe.plugins.wilder")
 require("Junzhe.plugins.tasks")
+
+-- ============================== --
+--          Neovide
+-- ============================== --
+require("Junzhe.neovide")
+
+-- ============================== --
+--          Context
+-- ============================== --
 -- require("Junzhe.plugins.gps")
 require("Junzhe.plugins.navic")
 
