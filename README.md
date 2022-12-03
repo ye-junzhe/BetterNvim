@@ -1,9 +1,9 @@
 # BetterNvim
 
-This repo is to setup a modern IDE for coding in neovim **(Mainly for macOS, if run on windows, needs some modifications ([see here](https://github.com/ye-junzhe/BetterNvim/edit/master/README.md#usage)))**
+This repo is to setup a modern IDE for coding in neovim **(Mainly for macOS, if run on windows, needs some modifications ([see here](https://github.com/ye-junzhe/BetterNvim#usage)))**
 
 With more than 60 plugins installed:
-([see here](https://github.com/McF4r/Neovim_Config/blob/master/lua/Junzhe/plugins-setup.lua))
+([see Usage](https://github.com/ye-junzhe/BetterNvim#usage))
 
 Still developing, so there are many commented out lines for future adjustment
 
