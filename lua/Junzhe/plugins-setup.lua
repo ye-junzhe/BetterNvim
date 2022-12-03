@@ -257,6 +257,12 @@ return packer.startup({
 			requires = "nvim-treesitter/nvim-treesitter",
 		})
 
+		-- navic better gps?
+		use({
+			"SmiteshP/nvim-navic",
+			requires = "neovim/nvim-lspconfig",
+		})
+
 		if packer_bootstrap then
 			require("packer").sync()
 		end
