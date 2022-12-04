@@ -263,6 +263,9 @@ return packer.startup({
 			requires = "neovim/nvim-lspconfig",
 		})
 
+		-- illuminate
+		use({ "RRethy/vim-illuminate" })
+
 		if packer_bootstrap then
 			require("packer").sync()
 		end
