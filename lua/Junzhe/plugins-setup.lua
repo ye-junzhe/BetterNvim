@@ -245,12 +245,6 @@ return packer.startup({
 			end,
 		})
 
-		-- lazygit
-		-- use({
-		-- 	"kdheepak/lazygit.nvim",
-		-- 	vim.keymap.set("n", "<leader>lg", ":LazyGit<CR>"),
-		-- })
-
 		-- nvim-gps show signatures
 		use({
 			"SmiteshP/nvim-gps",
@@ -265,6 +259,15 @@ return packer.startup({
 
 		-- illuminate
 		use({ "RRethy/vim-illuminate" })
+
+		-- lazygit
+		use({
+			"kdheepak/lazygit.nvim",
+			vim.keymap.set("n", "<leader>lg", ":LazyGit<CR>"),
+		})
+
+		-- minimap
+		use("wfxr/minimap.vim")
 
 		if packer_bootstrap then
 			require("packer").sync()
