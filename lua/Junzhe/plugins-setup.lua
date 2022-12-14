@@ -283,6 +283,9 @@ return packer.startup({
 		-- rainbow parentheses
 		use({ "p00f/nvim-ts-rainbow" })
 
+		-- match pairs
+		use({ "Yggdroot/hiPairs" })
+
 		if packer_bootstrap then
 			require("packer").sync()
 		end
