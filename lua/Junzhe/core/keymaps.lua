@@ -1,8 +1,6 @@
 -- set leader key to space
 vim.g.mapleader = " "
-
 local keymap = vim.keymap -- for conciseness
-
 ---------------------
 -- General Keymaps
 ---------------------
@@ -10,7 +8,7 @@ local keymap = vim.keymap -- for conciseness
 -- use jk to exit insert mode and save
 keymap.set("i", "jk", "<ESC>:w<CR>")
 keymap.set("n", "<D-s>", ":w<CR>")
-keymap.set("n", "q", ":q<CR>")
+keymap.set("n", "Q", ":q<CR>")
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>")
@@ -95,3 +93,9 @@ keymap.set("n", "<leader>q", ":TagbarToggle<CR>")
 
 -- diffview
 keymap.set("n", "<leader>fd", ":DiffviewFileHistory<CR>")
+
+-- lazygit
+keymap.set("n", "<leader>lg", ":LazyGit<CR>")
+
+-- minimap
+keymap.set("n", "<leader>w", ":MinimapToggle<CR>")

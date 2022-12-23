@@ -132,6 +132,12 @@ return packer.startup({
 
 		-- for an overview of my project structure
 		use("preservim/tagbar")
+		use({
+			"simrat39/symbols-outline.nvim",
+			config = function()
+				require("symbols-outline").setup({})
+			end,
+		})
 
 		-- TODO tree
 		use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" })
@@ -261,13 +267,24 @@ return packer.startup({
 		use({ "RRethy/vim-illuminate" })
 
 		-- lazygit
-		use({
-			"kdheepak/lazygit.nvim",
-			vim.keymap.set("n", "<leader>lg", ":LazyGit<CR>"),
-		})
+		use({ "kdheepak/lazygit.nvim" })
 
 		-- minimap
 		use("wfxr/minimap.vim")
+
+		-- color 16
+		use({
+			"norcalli/nvim-colorizer.lua",
+			config = function()
+				require("colorizer").setup({})
+			end,
+		})
+
+		-- rainbow parentheses
+		use({ "p00f/nvim-ts-rainbow" })
+
+		-- match pairs
+		use({ "Yggdroot/hiPairs" })
 
 		if packer_bootstrap then
 			require("packer").sync()

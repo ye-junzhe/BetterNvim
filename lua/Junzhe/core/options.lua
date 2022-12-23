@@ -50,6 +50,7 @@ let g:vimspector_terminal_maxwidth = 70
 ]])
 
 cmd([[
+    " autocmd BufEnter *.* nohl | MinimapRefresh
     set mousescroll=ver:1,hor:1
 
     set foldmethod=indent   

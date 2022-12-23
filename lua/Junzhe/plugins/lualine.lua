@@ -40,7 +40,8 @@ local new_colors = {
 -- configure lualine with modified theme
 lualine.setup({
 	options = {
-		theme = "catppuccin",
+		theme = "catppuccin-mocha",
+		-- theme = "nightfly",
 	},
 	sections = {
 
