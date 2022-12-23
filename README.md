@@ -7,17 +7,19 @@ With more than 60 plugins installed:
 
 Still developing, so there are many commented out lines for future adjustment
 
-- using Mason for native neovim LSP management
+- VSCode-like Auto-completion setup
+- Mason for native neovim LSP management
 - treesitter for highlighting
 - bufferline, lualine, nvim-tree, navic, noice, vimspector, todotree
 - colortheme: catppuccin
-- special setup for Rust development
-- [Neovide](https://neovide.dev/) integrated
-- `Tab` to auto go one argument forward when autocompletion activated
+- specially setup for Rust development
+- [Neovide](https://neovide.dev/) is recommended
 - The `<leader>` key has been changed to `<space>`
 
 ## Usage
 
-Most Keybindings at [keymaps.lua](https://github.com/McF4r/Neovim_Config/blob/master/lua/Junzhe/core/keymaps.lua)
+Most Keybindings at [keymaps.lua](https://github.com/ye-junzhe/BetterNvim/blob/master/lua/Junzhe/core/keymaps.lua)
 
-`<D->` means `Command` on macOS, changes needed if running on windows
+The rest of the settings are in the corresponding lua file of the plugin
+
+`<D->` means `Command` on macOS, and it only works in neovide, changes needed if running on windows
