@@ -8,6 +8,7 @@ local keymap = vim.keymap -- for conciseness
 -- use jk to exit insert mode and save
 keymap.set("i", "jk", "<ESC>:w<CR>")
 keymap.set("n", "<D-s>", ":w<CR>")
+keymap.set("n", "<C-s>", ":w<CR>")
 keymap.set("n", "Q", ":q<CR>")
 
 -- clear search highlights
@@ -21,6 +22,8 @@ keymap.set("n", "<leader>+", "<C-a>") -- increment
 keymap.set("n", "<leader>-", "<C-x>") -- decrement
 
 -- window management
+keymap.set("n", "|", "<C-w>v") -- split window vertically
+keymap.set("n", "-", "<C-w>s") -- split window horizontally
 keymap.set("n", "<D-d>", "<C-w>v") -- split window vertically
 keymap.set("n", "<D-c>", "<C-w>s") -- split window horizontally
 keymap.set("n", "<D-p>", "<C-w>=") -- make split windows equal width & height
@@ -99,3 +102,6 @@ keymap.set("n", "<leader>lg", ":LazyGit<CR>")
 
 -- minimap
 keymap.set("n", "<leader>w", ":MinimapToggle<CR>")
+
+-- neoclip
+keymap.set("n", "<leader>l", ":Telescope neoclip<CR>")
