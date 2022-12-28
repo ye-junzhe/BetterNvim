@@ -115,10 +115,10 @@ return packer.startup({
 		-- rust-tools
 		use("simrat39/rust-tools.nvim")
 
-		-- vimspector
+		-- Debug tools
 		use("puremourning/vimspector")
 
-		-- hop
+		-- jump to specific line, word, pattern etc
 		use({
 			"phaazon/hop.nvim",
 			branch = "v2",
@@ -130,7 +130,7 @@ return packer.startup({
 		-- monokai colorscheme
 		use("tanvirtin/monokai.nvim")
 
-		-- for an overview of my project structure
+		-- overview of the file structure
 		use("preservim/tagbar")
 		use({
 			"simrat39/symbols-outline.nvim",
@@ -257,13 +257,13 @@ return packer.startup({
 			requires = "nvim-treesitter/nvim-treesitter",
 		})
 
-		-- navic better gps? haha seems a indian developed this plugin
+		-- showing context in winbar
 		use({
 			"SmiteshP/nvim-navic",
 			requires = "neovim/nvim-lspconfig",
 		})
 
-		-- illuminate
+		-- Highlight vriables and stuff
 		use({ "RRethy/vim-illuminate" })
 
 		-- lazygit
