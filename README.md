@@ -8,7 +8,7 @@
 ![BetterNvim Dashboard](./pic/Dashboard.png)
 ![BetterNvim Demo](./pic/Coding.png)
 
-This repo is to setup a modern IDE for coding in neovim **(Mainly for macOS, if run on windows, needs some modifications ([see Usage](https://github.com/ye-junzhe/BetterNvim#usage)))**
+This repo is to setup a modern IDE for coding in neovim **(Mainly for macOS, if run on windows, needs some modifications ([see here](https://github.com/ye-junzhe/BetterNvim#:~:text=%3CD%2D%3E%20%3D%20Command%20on%20macOS%2C%20and%20it%20only%20works%20in%20neovide%2C%20changes%20needed%20if%20running%20on%20windows)))**
 
 With more than 70 plugins installed:
 ([see here](https://github.com/ye-junzhe/BetterNvim#usage))
@@ -19,9 +19,9 @@ Still developing, so there are many commented out lines for future adjustment
 - Mason for native neovim LSP management
 - treesitter for highlighting
 - Plugins: bufferline, lualine, nvim-tree, navic, noice, vimspector, todotree ...
-- colortheme: catppuccin
-- specially setup for Rust development
-- **[Neovide](https://neovide.dev/) HIGHLY recommend**
+- colorscheme : catppuccin
+- special setup for Rust development
+- **[Neovide](https://neovide.dev/) HIGHLY recommended**
 - The `<leader>` key has been changed to `<space>`
 
 ## Installation
