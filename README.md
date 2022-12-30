@@ -10,8 +10,7 @@
 
 This repo is to setup a modern IDE for coding in neovim **(Mainly for macOS, if run on windows, needs some modifications ([see here](https://github.com/ye-junzhe/BetterNvim#:~:text=%3CD%2D%3E%20%3D%20Command%20on%20macOS%2C%20and%20it%20only%20works%20in%20neovide%2C%20changes%20needed%20if%20running%20on%20windows)))**
 
-With more than 70 plugins installed:
-([see here](https://github.com/ye-junzhe/BetterNvim#usage))
+With more than 70 plugins installed
 
 Still developing, so there are many commented out lines for future adjustment
 
