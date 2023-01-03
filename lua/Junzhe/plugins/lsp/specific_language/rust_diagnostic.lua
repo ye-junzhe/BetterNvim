@@ -1,3 +1,6 @@
+-- ============================== --
+--          Not used!!!
+-- ============================== --
 -- rust config
 -- LSP Diagnostics Options Setup
 local sign = function(opts)

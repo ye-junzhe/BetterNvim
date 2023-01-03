@@ -1,3 +1,6 @@
+-- ============================== --
+--          Not used!!!
+-- ============================== --
 local status, rust_tools = pcall(require, "rust-tools")
 if not status then
 	return
