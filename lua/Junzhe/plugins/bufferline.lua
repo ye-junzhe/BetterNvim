@@ -68,7 +68,3 @@ bufferline.setup({
 		},
 	},
 })
-
--- bufferline 左右Tab切换
-vim.keymap.set("n", "<S-h>", ":BufferLineCyclePrev<CR>", opt)
-vim.keymap.set("n", "<S-l>", ":BufferLineCycleNext<CR>", opt)

@@ -105,3 +105,9 @@ keymap.set("n", "<leader>w", ":MinimapToggle<CR>")
 
 -- neoclip
 keymap.set("n", "<leader>l", ":Telescope neoclip<CR>")
+
+-- bufferline
+keymap.set("n", "<S-h>", ":BufferLineCyclePrev<CR>", opt)
+keymap.set("n", "<S-l>", ":BufferLineCycleNext<CR>", opt)
+
+-- todotree and telescope keybindings in todotree.lua and telescope.lua
