@@ -9,51 +9,7 @@
 ![BetterNvim Demo](./pic/Coding.png)
 ![BetterNvim with other apps](./pic/Desktop.png)
 
-# Demo 🎥
-<details>
-  <summary>Start screen</summary>
-  <video src="./video/Start.mov" controls></video>
-</details>
-
-<details>
-  <summary>Mason</summary>
-  <video src="./video/Mason_for_lsp.mov" controls></video>
-</details>
-
-<details>
-  <summary>Treesitter</summary>
-  <video src="./video/Treesitter_for_highlight.mov" controls></video>
-</details>
-
-<details>
-  <summary>Bufferline</summary>
-  <video src="./video/Switch_between_tabs.mov" controls></video>
-</details>
-
-<details>
-  <summary>Todo Tree</summary>
-  <video src="./video/TodoTree.mov" controls></video>
-</details>
-
-<details>
-  <summary>Telescope</summary>
-  <video src="./video/Telescope.mov" controls></video>
-</details>
-
-<details>
-  <summary>Minimap</summary>
-  <video src="./video/Minimap.mov" controls></video>
-</details>
-
-<details>
-  <summary>Tagbar</summary>
-  <video src="./video/Tagbar.mov" controls></video>
-</details>
-
-<details>
-  <summary>Hop</summary>
-  <video src="./video/Hop.mov" controls></video>
-</details>
+## Introduction
 
 This repo is to setup a modern IDE for coding in neovim **(Mainly for macOS, if run on windows, needs some modifications ([see here](https://github.com/ye-junzhe/BetterNvim#:~:text=%3CD%2D%3E%20%3D%20Command%20on%20macOS%2C%20and%20it%20only%20works%20in%20neovide%2C%20changes%20needed%20if%20running%20on%20windows)))**
 
@@ -111,21 +67,24 @@ The rest of the settings are in the corresponding lua file of the plugin
 
 `<D->` = `Command` on macOS, and it only works in neovide, changes needed if running on windows
 
-<style>
-  details summary {
-    font-size: 1.3em;
-    color: #A6E3A1;
-    background-color: #1E1E2E;
-  }
-  details {
-    border: 1px solid #1E1E2E;
-  }
-</style>
+### Demo 🎥
 
-<script>
-  document.querySelectorAll("details").forEach(function(details) {
-    details.querySelector("summary").addEventListener("click", function() {
-      details.open = !details.open;
-    });
-  });
-</script>
+- Start screen
+  ![Start screen](./video/Start.gif)
+- Mason
+  ![Mason](./video/Mason_for_lsp.gif)
+- Treesitter
+  ![Treesitter](./video/Treesitter_for_highlight.gif)
+- LSPSaga
+  ![LSPSaga](./video/LSPSaga.gif)
+- Telescope
+  ![Telescope](./video/Telescope.gif)
+- Switch tabs
+  ![Switch tabs](./video/Switch_between_tabs.gif)
+- Tagbar
+  ![Tagbar](./video/Tagbar.gif)
+- Todotree
+  ![Todotree](./video/TodoTree.gif)
+- Hop
+  ![Hop](./video/Hop.gif)
+- **and so many other features...**
