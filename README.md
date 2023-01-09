@@ -9,6 +9,8 @@
 ![BetterNvim Demo](./pic/Coding.png)
 ![BetterNvim with other apps](./pic/Desktop.png)
 
+## Introduction
+
 This repo is to setup a modern IDE for coding in neovim **(Mainly for macOS, if run on windows, needs some modifications ([see here](https://github.com/ye-junzhe/BetterNvim#:~:text=%3CD%2D%3E%20%3D%20Command%20on%20macOS%2C%20and%20it%20only%20works%20in%20neovide%2C%20changes%20needed%20if%20running%20on%20windows)))**
 
 With more than 70 plugins installed
@@ -64,3 +66,25 @@ Most Keybindings at [keymaps.lua](https://github.com/ye-junzhe/BetterNvim/blob/m
 The rest of the settings are in the corresponding lua file of the plugin
 
 `<D->` = `Command` on macOS, and it only works in neovide, changes needed if running on windows
+
+### Demo 🎥
+
+- Start screen
+  ![Start screen](./video/Start.gif)
+- Mason
+  ![Mason](./video/Mason_for_lsp.gif)
+- Treesitter
+  ![Treesitter](./video/Treesitter_for_highlight.gif)
+- LSPSaga
+  ![LSPSaga](./video/LSPSaga.gif)
+- Telescope
+  ![Telescope](./video/Telescope.gif)
+- Switch tabs
+  ![Switch tabs](./video/Switch_between_tabs.gif)
+- Tagbar
+  ![Tagbar](./video/Tagbar.gif)
+- Todotree
+  ![Todotree](./video/TodoTree.gif)
+- Hop
+  ![Hop](./video/Hop.gif)
+- **and so many other features...**
