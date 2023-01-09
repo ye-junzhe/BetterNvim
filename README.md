@@ -5,9 +5,9 @@
 
 ## Preview
 
-![BetterNvim Dashboard](./pic/Dashboard.png)
-![BetterNvim Demo](./pic/Coding.png)
-![BetterNvim with other apps](./pic/Desktop.png)
+![BetterNvim Dashboard](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/pic/Dashboard.png?raw=true)
+![BetterNvim Demo](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/pic/Coding.png?raw=true)
+![BetterNvim with other apps](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/pic/Desktop.png?raw=true)
 
 ## Introduction
 
@@ -68,23 +68,24 @@ The rest of the settings are in the corresponding lua file of the plugin
 `<D->` = `Command` on macOS, and it only works in neovide, changes needed if running on windows
 
 ### Demo 🎥
-
 - Start screen
-  ![Start screen](./video/Start.gif)
+  ![Start screen](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Start.gif?raw=true)
 - Mason
-  ![Mason](./video/Mason_for_lsp.gif)
+  ![Mason](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Mason.gif?raw=true)
 - Treesitter
-  ![Treesitter](./video/Treesitter_for_highlight.gif)
+  ![Treesitter](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Treesitter.gif?raw=true)
 - LSPSaga
-  ![LSPSaga](./video/LSPSaga.gif)
+  ![LSPSaga](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/LSPSaga.gif?raw=true)
 - Telescope
-  ![Telescope](./video/Telescope.gif)
-- Switch tabs
-  ![Switch tabs](./video/Switch_between_tabs.gif)
+  ![Telescope](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Telescope.gif?raw=true)
+- Switch tabs(Bufferline)
+  ![Switch tabs](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Bufferline.gif?raw=true)
+- Minimap
+  ![Switch tabs](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Minimap.gif?raw=true)
 - Tagbar
-  ![Tagbar](./video/Tagbar.gif)
-- Todotree
-  ![Todotree](./video/TodoTree.gif)
+  ![Tagbar](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Tagbar.gif?raw=true)
+- Todo-Tree
+  ![Todotree](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/TodoTree.gif?raw=true)
 - Hop
-  ![Hop](./video/Hop.gif)
+  ![Hop](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Hop.gif?raw=true)
 - **and so many other features...**
