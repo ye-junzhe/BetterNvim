@@ -67,7 +67,7 @@ The rest of the settings are in the corresponding lua file of the plugin
 
 `<D->` = `Command` on macOS, and it only works in neovide, changes needed if running on windows
 
-### Demo 🎥
+<!-- ### Demo 🎥
 - Start screen
   ![Start screen](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Start.gif?raw=true)
 - Mason
@@ -88,4 +88,4 @@ The rest of the settings are in the corresponding lua file of the plugin
   ![Todotree](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/TodoTree.gif?raw=true)
 - Hop
   ![Hop](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Hop.gif?raw=true)
-- **and so many other features...**
+- **and so many other features...** -->
