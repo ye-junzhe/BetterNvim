@@ -67,25 +67,26 @@ The rest of the settings are in the corresponding lua file of the plugin
 
 `<D->` = `Command` on macOS, and it only works in neovide, changes needed if running on windows
 
-<!-- ### Demo 🎥
+### Demo 🎥
+
 - Start screen
-  ![Start screen](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Start.gif?raw=true)
+  <video src="https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Start.mp4?raw=true" controls="controls" style="max-width: 730px;"> </video>
 - Mason
-  ![Mason](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Mason.gif?raw=true)
+ <video src="https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Mason.mp4?raw=true" controls="controls" style="max-width: 730px;"> </video>
 - Treesitter
-  ![Treesitter](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Treesitter.gif?raw=true)
+ <video src="https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Treesitter.mp4?raw=true" controls="controls" style="max-width: 730px;"> </video>
 - LSPSaga
-  ![LSPSaga](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/LSPSaga.gif?raw=true)
+ <video src="https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/LSPSaga.mp4?raw=true" controls="controls" style="max-width: 730px;"> </video>
 - Telescope
-  ![Telescope](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Telescope.gif?raw=true)
+ <video src="https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Telescope.mp4?raw=true" controls="controls" style="max-width: 730px;"> </video>
 - Switch tabs(Bufferline)
-  ![Switch tabs](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Bufferline.gif?raw=true)
+ <video src="https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Bufferline.mp4?raw=true" controls="controls" style="max-width: 730px;"> </video>
 - Minimap
-  ![Switch tabs](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Minimap.gif?raw=true)
+ <video src="https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Minimap.mp4?raw=true" controls="controls" style="max-width: 730px;"> </video>
 - Tagbar
-  ![Tagbar](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Tagbar.gif?raw=true)
+ <video src="https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Minimap.mp4?raw=true" controls="controls" style="max-width: 730px;"> </video>
 - Todo-Tree
-  ![Todotree](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/TodoTree.gif?raw=true)
+ <video src="https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/TodoTree.mp4?raw=true" controls="controls" style="max-width: 730px;"> </video>
 - Hop
-  ![Hop](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Hop.gif?raw=true)
-- **and so many other features...** -->
+ <video src="https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Hop.mp4?raw=true" controls="controls" style="max-width: 730px;"> </video>
+- **and so many other features...**
