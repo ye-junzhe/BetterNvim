@@ -8,6 +8,9 @@ let g:neovide_floating_blur_amount_x = 2.0
 let g:neovide_floating_blur_amount_y = 2.0
 
 let g:neovide_refresh_rate = 60
+let g:neovide_refresh_rate_idle = 5
+
+let g:neovide_confirm_quit = v:true
 
 let g:neovide_hide_mouse_when_typing = v:true
 
