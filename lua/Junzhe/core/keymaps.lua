@@ -1,14 +1,19 @@
 -- set leader key to space
 vim.g.mapleader = " "
-
 local keymap = vim.keymap -- for conciseness
-
 ---------------------
 -- General Keymaps
 ---------------------
 
--- use jk to exit insert mode
-keymap.set("i", "jk", "<ESC>")
+-- use jk to exit insert mode and save
+keymap.set("i", "jk", "<ESC>:w<CR>")
+keymap.set("n", "<D-s>", ":w<CR>")
+keymap.set("n", "<C-s>", ":w<CR>")
+keymap.set("n", "Q", ":q<CR>")
+
+-- ctrl+w or cmd+w to close the buffer
+keymap.set("n", "<C-w>", ":bdelete<CR>")
+keymap.set("n", "<D-w>", ":bdelete<CR>")
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>")
@@ -21,22 +26,30 @@ keymap.set("n", "<leader>+", "<C-a>") -- increment
 keymap.set("n", "<leader>-", "<C-x>") -- decrement
 
 -- window management
-keymap.set("n", "<leader>si", "<C-w>v") -- split window vertically
-keymap.set("n", "<leader>so", "<C-w>s") -- split window horizontally
-keymap.set("n", "<leader>sp", "<C-w>=") -- make split windows equal width & height
-keymap.set("n", "<leader>sk", ":close<CR>") -- close current split window
+keymap.set("n", "|", "<C-w>v") -- split window vertically
+keymap.set("n", "-", "<C-w>s") -- split window horizontally
+keymap.set("n", "<D-d>", "<C-w>v") -- split window vertically
+keymap.set("n", "<D-c>", "<C-w>s") -- split window horizontally
+keymap.set("n", "<D-p>", "<C-w>=") -- make split windows equal width & height
+keymap.set("n", "<D-w>", ":close<CR>") -- close current split window
 
-keymap.set("n", "<leader>ti", ":tabnew<CR>") -- open new tab
-keymap.set("n", "<leader>to", ":tabn<CR>") --  go to next tab
-keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
-keymap.set("n", "<leader>tk", ":tabclose<CR>") -- close current tab
+keymap.set("n", "<D-t>", ":tabnew<CR>") -- open new tab
+keymap.set("n", "<D-t>i", ":tabn<CR>") --  go to next tab
+keymap.set("n", "<D-t>p", ":tabp<CR>") --  go to previous tab
+keymap.set("n", "<D-k>", ":tabclose<CR>") -- close current tab
+
+-- 替换方向键为调节分屏大小
+keymap.set("n", "<up>", ":res -5<CR>")
+keymap.set("n", "<down>", ":res +5<CR>")
+keymap.set("n", "<left>", ":vertical resize+5<CR>")
+keymap.set("n", "<right>", ":vertical resize-5<CR>")
 
 ----------------------
 -- Plugin Keybinds
 ----------------------
 
 -- vim-maximizer
-keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
+keymap.set("n", "<leader>m", ":MaximizerToggle<CR>") -- toggle split window maximization
 
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
@@ -56,3 +69,44 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
+
+-- Vimspector
+keymap.set("n", "Db", ":call vimspector#ToggleBreakpoint()<cr>")
+keymap.set("n", "Dw", ":call vimspector#AddWatch()<cr>")
+keymap.set("n", "De", ":call vimspector#Evaluate()<cr>")
+
+keymap.set("n", "<F7>", ":call vimspector#Launch()<CR>")
+keymap.set("n", "<F8>", ":call vimspector#StepInto()<CR>")
+keymap.set("n", "<F9>", ":call vimspector#StepOut()<CR>")
+keymap.set("n", "<F10>", ":call vimspector#StepOver()<CR>")
+keymap.set("n", "<F12>", ":call vimspector#Reset()<CR>")
+
+-- vim.cmd([[
+-- " nmap <F9> <cmd>call vimspector#Launch()<cr>
+-- " nmap <F5> <cmd>call vimspector#StepOver()<cr>
+-- " nmap <F8> <cmd>call vimspector#Reset()<cr>
+-- " nmap <F11> <cmd>call vimspector#StepOver()<cr>")
+-- " nmap <F12> <cmd>call vimspector#StepOut()<cr>")
+-- " nmap <F10> <cmd>call vimspector#StepInto()<cr>")
+-- ]])
+
+-- Hop
+keymap.set("n", "<leader>j", ":HopLine<CR>")
+keymap.set("n", "mk", ":HopPattern<CR>")
+keymap.set("n", "ml", ":HopWord<CR>")
+
+-- Tagbar
+keymap.set("n", "<leader>q", ":TagbarToggle<CR>")
+
+-- diffview
+keymap.set("n", "<leader>fd", ":DiffviewFileHistory<CR>")
+
+-- lazygit
+keymap.set("n", "<leader>lg", ":LazyGit<CR>")
+
+-- minimap
+keymap.set("n", "<leader>w", ":MinimapToggle<CR>")
+
+-- bufferline
+vim.keymap.set("n", "<S-h>", ":BufferLineCyclePrev<CR>", opt)
+vim.keymap.set("n", "<S-l>", ":BufferLineCycleNext<CR>", opt)

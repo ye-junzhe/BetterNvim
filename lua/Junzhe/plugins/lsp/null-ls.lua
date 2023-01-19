@@ -7,6 +7,7 @@ end
 -- for conciseness
 local formatting = null_ls.builtins.formatting -- to setup formatters
 local diagnostics = null_ls.builtins.diagnostics -- to setup linters
+local file_diag = null_ls.builtins.diagnostics
 local markdown_diag = null_ls.builtins.diagnostics
 
 -- to setup format on save
@@ -23,7 +24,11 @@ null_ls.setup({
 		formatting.rubocop,
 		formatting.markdownlint,
 		formatting.csharpier,
-		markdown_diag.markdownlint,
+		formatting.rustfmt,
+		formatting.shfmt,
+		file_diag.shellcheck,
+		-- markdown_diag.markdownlint,
+
 		diagnostics.eslint_d.with({ -- js/ts linter
 			-- only enable eslint if root has .eslintrc.js (not in youtube nvim video)
 			condition = function(utils)
@@ -31,6 +36,7 @@ null_ls.setup({
 			end,
 		}),
 	},
+
 	-- configure format on save
 	on_attach = function(current_client, bufnr)
 		if current_client.supports_method("textDocument/formatting") then
