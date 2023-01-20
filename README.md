@@ -25,7 +25,6 @@ Still developing, so there are many commented out lines for future adjustment
 - colorscheme : catppuccin
 - special setup for Rust development
 - **[Neovide](https://neovide.dev/) HIGHLY recommended**
-- The `<leader>` key has been changed to `<space>`
 
 ## Installation
 
@@ -62,31 +61,48 @@ git clone https://github.com/ye-junzhe/BetterNvim.git $HOME/.config/nvim
 nvim +PackerSync
 ```
 
+### Keybindings 🎥
+
 Most Keybindings at [keymaps.lua](https://github.com/ye-junzhe/BetterNvim/blob/master/lua/Junzhe/core/keymaps.lua)
 
 The rest of the settings are in the corresponding lua file of the plugin
 
 `<D->` = `Command` on macOS, and it only works in neovide, changes needed if running on windows
 
-<!-- ### Demo 🎥
-- Start screen
-  ![Start screen](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Start.gif?raw=true)
-- Mason
-  ![Mason](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Mason.gif?raw=true)
-- Treesitter
-  ![Treesitter](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Treesitter.gif?raw=true)
-- LSPSaga
-  ![LSPSaga](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/LSPSaga.gif?raw=true)
-- Telescope
-  ![Telescope](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Telescope.gif?raw=true)
-- Switch tabs(Bufferline)
-  ![Switch tabs](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Bufferline.gif?raw=true)
-- Minimap
-  ![Switch tabs](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Minimap.gif?raw=true)
-- Tagbar
-  ![Tagbar](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Tagbar.gif?raw=true)
-- Todo-Tree
-  ![Todotree](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/TodoTree.gif?raw=true)
-- Hop
-  ![Hop](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/video/Hop.gif?raw=true)
-- **and so many other features...** -->
+**The `<leader>` key has been changed to `<space>`**
+
+```
+# Basic
+<leader>e => File explorer
+<leader>ff => File search
+<leader>s => Word search
+<leader>w => Code minimap
+<leader>q => Tagbar
+<leader>r => Todo-Tree
+<leader>lg => Lazygit
+
+# Lspsaga
+gh => Hover doc
+gd => Definition
+gf => Find definition and references
+<leader>a => Code actions
+
+# Bufferline
+Shift+h => Switch left
+Shift+l => Switch right
+ctrl+w => Close buffer
+
+# Float terminal
+t => Terminal
+
+# Navigation
+ctrl + h/j/k/l => navigate windows
+
+# Hop
+<leader>j => jump lines
+ml => jump words
+
+# Save and quit
+ctrl + s => Save
+Q => quit
+```
