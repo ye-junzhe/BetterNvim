@@ -1,5 +1,10 @@
 <div align="center">
  <h1> BetterNvim </h1>
+ <p align="center">
+     <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/ye-junzhe/BetterNvim?color=A6E3A1">
+     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/ye-junzhe/BetterNvim?color=A6E3A1">
+     <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/ye-junzhe/BetterNvim?color=%2300007C&logoColor=%2300007C">
+</p>
  <a href="https://github.com/ye-junzhe/BetterNvim/#Installation">📦 Installation</a>
 </div>
 
