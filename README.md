@@ -110,4 +110,12 @@ ml => jump words
 # Save and quit
 ctrl + s => Save
 Q => quit
+
+# Bookmark
+mm => Create and delete
+mi => Add annotation
+mc => Clear bookmarks
+mx => Clear in all buffers
+mn, mp => Navigate
+ma => Show all
 ```

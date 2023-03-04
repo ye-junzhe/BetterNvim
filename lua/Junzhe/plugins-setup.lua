@@ -286,6 +286,9 @@ return packer.startup({
 		-- match pairs
 		use({ "Yggdroot/hiPairs" })
 
+		-- vim bookmarks
+		use({ "MattesGroeger/vim-bookmarks" })
+
 		if packer_bootstrap then
 			require("packer").sync()
 		end

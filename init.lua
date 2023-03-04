@@ -22,6 +22,7 @@ require("Junzhe.plugins.wilder")
 require("Junzhe.plugins.tasks")
 require("Junzhe.plugins.illuminate")
 require("Junzhe.plugins.minimap")
+require("Junzhe.plugins.bookmarks")
 
 -- ============================== --
 --          Neovide
