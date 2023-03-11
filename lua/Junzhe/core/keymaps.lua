@@ -12,7 +12,7 @@ keymap.set("n", "<C-s>", ":w<CR>")
 keymap.set("n", "Q", ":q<CR>")
 
 -- ctrl+w or cmd+w to close the buffer
-keymap.set("n", "<C-w>", ":bdelete<CR>")
+keymap.set("n", "<C-q>", ":bdelete<CR>")
 keymap.set("n", "<D-w>", ":bdelete<CR>")
 
 -- clear search highlights
@@ -60,6 +60,8 @@ keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in 
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
+keymap.set("n", "<leader>fw", "<cmd>Telescope current_buffer_fuzzy_find<cr>") -- list available help tags
+keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>") -- list available help tags
 
 -- telescope git commands (not on youtube nvim video)
 keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>") -- list all git commits (use <cr> to checkout) ["gc" for git commits]
