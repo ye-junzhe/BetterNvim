@@ -112,3 +112,6 @@ keymap.set("n", "<leader>w", ":MinimapToggle<CR>")
 -- bufferline
 vim.keymap.set("n", "<S-h>", ":BufferLineCyclePrev<CR>", opt)
 vim.keymap.set("n", "<S-l>", ":BufferLineCycleNext<CR>", opt)
+
+-- open register
+vim.keymap.set("n", "<leader>fg", ":registers<CR>")
