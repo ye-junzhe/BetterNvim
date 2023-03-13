@@ -17,7 +17,7 @@
 
 ## Introduction
 
-This repo is to setup a modern IDE for coding in neovim **(Mainly for macOS, if run on windows, needs some modifications ([see here](https://github.com/ye-junzhe/BetterNvim#:~:text=%3CD%2D%3E%20%3D%20Command%20on%20macOS%2C%20and%20it%20only%20works%20in%20neovide%2C%20changes%20needed%20if%20running%20on%20windows)))**
+This repo is to setup a modern IDE for coding in neovim **(If run on Windows, need one modification ([see here](https://github.com/ye-junzhe/BetterNvim#:~:text=%3CD%2D%3E%20%3D%20Command%20on%20macOS%2C%20and%20it%20only%20works%20in%20neovide%2C%20changes%20needed%20if%20running%20on%20windows)))**
 
 With more than 70 plugins installed
 
@@ -28,8 +28,8 @@ Still developing, so there are many commented out lines for future adjustment
 - treesitter for highlighting
 - Plugins: bufferline, lualine, nvim-tree, navic, noice, vimspector, todotree ...
 - colorscheme : catppuccin
-- special setup for Rust development
-- **[Neovide](https://neovide.dev/) HIGHLY recommended**
+- **[Neovide](https://neovide.dev/) recommended**
+- Font recommend: [JetBrainsMono](https://www.jetbrains.com/lp/mono/) Nerd Font Mono
 
 ## Installation
 
@@ -66,7 +66,33 @@ git clone https://github.com/ye-junzhe/BetterNvim.git $HOME/.config/nvim
 nvim +PackerSync
 ```
 
-### Keybindings 🎥
+### Tagbar
+
+Tagbar requires [ctags]( https://github.com/preservim/tagbar#:~:text=example%20gutentags.-,Dependencies,-Vim%20%3E%3D%207.3.1058%20or ) work, modify this line in [options.lua](https://github.com/ye-junzhe/BetterNvim/blob/master/lua/Junzhe/core/options.lua)
+```
+vim.g.tagbar_ctags_bin = "/path/to/ctags/bin"
+```
+
+## Plugins and Lsps and Highlighting
+
+### Plugins
+
+```:w``` => In [plugins-setup.lua](https://github.com/ye-junzhe/BetterNvim/blob/master/lua/Junzhe/plugins-setup.lua) to write the file and auto update neovim plugins
+
+### Lsps
+
+- ```:Mason``` => Install Lsps(g? for help)
+- All configs in [this folder](https://github.com/ye-junzhe/BetterNvim/tree/master/lua/Junzhe/plugins/lsp)
+- special setup for Rust development
+- I write C/C++ code a lot so I have special clangd setup as well, you can also modify it freely in this [file](https://github.com/ye-junzhe/BetterNvim/blob/master/lua/Junzhe/plugins/lsp/lspconfig.lua)
+
+### Syntax highlighting
+
+- ```:TSInstall``` => Install tree-sitter highlighting for specific language
+- Configs in [treesitter.lua](https://github.com/ye-junzhe/BetterNvim/blob/master/lua/Junzhe/plugins/treesitter.lua)
+```
+
+## Keybindings 🎥
 
 Most Keybindings at [keymaps.lua](https://github.com/ye-junzhe/BetterNvim/blob/master/lua/Junzhe/core/keymaps.lua)
 
@@ -75,21 +101,24 @@ The rest of the settings are in the corresponding lua file of the plugin
 `<D->` = `Command` on macOS, and it only works in neovide, changes needed if running on windows
 
 **The `<leader>` key has been changed to `<space>`**
-
-```
 # Basic
-<leader>e => File explorer
-<leader>ff => File search
-<leader>s => Word search
-<leader>w => Code minimap
+<leader>e => File explorer(g? for help)
 <leader>q => Tagbar
 <leader>r => Todo-Tree
 <leader>lg => Lazygit
+<leader>w => Code minimap
+
+# Telescope
+<leader>ff => File search
+<leader>fr => Recent file search
+<leader>fw => Word search in current buffer
+<leader>fs => Word search in all files
 
 # Lspsaga
 gh => Hover doc
 gd => Definition
 gf => Find definition and references
+<leader>o => show symbols(silimar to tagbar)
 <leader>a => Code actions
 
 # Bufferline
