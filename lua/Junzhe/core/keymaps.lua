@@ -8,11 +8,11 @@ local keymap = vim.keymap -- for conciseness
 -- use jk to exit insert mode and save
 keymap.set("i", "jk", "<ESC>:w<CR>")
 keymap.set("n", "<D-s>", ":w<CR>")
-keymap.set("n", "<C-s>", ":w<CR>")
+keymap.set("n", "W", ":w<CR>")
 keymap.set("n", "Q", ":q<CR>")
 
 -- ctrl+w or cmd+w to close the buffer
-keymap.set("n", "<C-q>", ":bdelete<CR>")
+keymap.set("n", "<C-w>", ":bdelete<CR>")
 keymap.set("n", "<D-w>", ":bdelete<CR>")
 
 -- clear search highlights
