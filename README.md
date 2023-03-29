@@ -68,7 +68,8 @@ nvim +PackerSync
 
 ### Tagbar
 
-Tagbar requires [ctags]( https://github.com/preservim/tagbar#:~:text=example%20gutentags.-,Dependencies,-Vim%20%3E%3D%207.3.1058%20or ) work, modify this line in [options.lua](https://github.com/ye-junzhe/BetterNvim/blob/master/lua/Junzhe/core/options.lua)
+Tagbar requires [ctags](https://github.com/preservim/tagbar#:~:text=example%20gutentags.-,Dependencies,-Vim%20%3E%3D%207.3.1058%20or) to work, modify this line in [options.lua](https://github.com/ye-junzhe/BetterNvim/blob/master/lua/Junzhe/core/options.lua)
+
 ```
 vim.g.tagbar_ctags_bin = "/path/to/ctags/bin"
 ```
@@ -77,19 +78,20 @@ vim.g.tagbar_ctags_bin = "/path/to/ctags/bin"
 
 ### Plugins
 
-```:w``` => In [plugins-setup.lua](https://github.com/ye-junzhe/BetterNvim/blob/master/lua/Junzhe/plugins-setup.lua) to write the file and auto update neovim plugins
+`:w` => In [plugins-setup.lua](https://github.com/ye-junzhe/BetterNvim/blob/master/lua/Junzhe/plugins-setup.lua) to write the file and auto update neovim plugins
 
 ### Lsps
 
-- ```:Mason``` => Install Lsps(g? for help)
+- `:Mason` => Install Lsps(g? for help)
 - All configs in [this folder](https://github.com/ye-junzhe/BetterNvim/tree/master/lua/Junzhe/plugins/lsp)
 - special setup for Rust development
 - I write C/C++ code a lot so I have special clangd setup as well, you can also modify it freely in this [file](https://github.com/ye-junzhe/BetterNvim/blob/master/lua/Junzhe/plugins/lsp/lspconfig.lua)
 
 ### Syntax highlighting
 
-- ```:TSInstall``` => Install tree-sitter highlighting for specific language
+- `:TSInstall` => Install tree-sitter highlighting for specific language
 - Configs in [treesitter.lua](https://github.com/ye-junzhe/BetterNvim/blob/master/lua/Junzhe/plugins/treesitter.lua)
+
 ```
 
 ## Keybindings 🎥
@@ -137,8 +139,8 @@ ctrl + h/j/k/l => navigate windows
 ml => jump words
 
 # Save and quit
-ctrl + s => Save
-Q => quit
+W => Save
+Q => Quit
 
 # Bookmark
 mm => Create and delete
