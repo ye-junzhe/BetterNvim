@@ -11,6 +11,7 @@ local keymap = vim.keymap
 -- NOTE:
 -- FIX:
 -- WARNING:
+--@OPTIMIZE:
 
 todotree.setup({
 	keymap.set("n", "]t", function()
