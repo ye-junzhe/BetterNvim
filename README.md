@@ -26,7 +26,7 @@ Still developing, so there are many commented out lines for future adjustment
 - VSCode-like Auto-completion setup
 - Mason for native neovim LSP management
 - treesitter for highlighting
-- Plugins: bufferline, lualine, nvim-tree, navic, noice, vimspector, todotree ...
+- Plugins: Lspsaga, bufferline, lualine, nvim-tree, vimspector, todotree ...
 - colorscheme : catppuccin
 - **[Neovide](https://neovide.dev/) recommended**
 - Font recommend: [JetBrainsMono](https://www.jetbrains.com/lp/mono/) Nerd Font Mono
@@ -122,14 +122,14 @@ gd => Definition
 gf => Find definition and references
 <leader>o => show symbols(silimar to tagbar)
 <leader>a => Code actions
+<leader>t => Terminal
+<leader>dw => Work space diagnostics
+<leader>db => Buf diagnostics
 
 # Bufferline
 Shift+h => Switch left
 Shift+l => Switch right
 ctrl+w => Close buffer
-
-# Float terminal
-t => Terminal
 
 # Navigation
 ctrl + h/j/k/l => navigate windows
