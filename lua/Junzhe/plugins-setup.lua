@@ -114,7 +114,7 @@ return packer.startup({
 		use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
 		-- float terminal
-		use("voldikss/vim-floaterm")
+		-- use("voldikss/vim-floaterm")
 
 		--  vertical lines at each indentation level for code indented with spaces
 		use("lukas-reineke/indent-blankline.nvim")
