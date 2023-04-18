@@ -83,7 +83,14 @@ return packer.startup({
 		-- configuring lsp servers
 		use("neovim/nvim-lspconfig") -- easily configure language servers
 		use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
-		use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
+		use({
+			"glepnir/lspsaga.nvim",
+			branch = "main",
+			requires = {
+				{ "nvim-tree/nvim-web-devicons" },
+				{ "nvim-treesitter/nvim-treesitter" },
+			},
+		})
 		use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
 		use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
@@ -116,7 +123,7 @@ return packer.startup({
 		use("simrat39/rust-tools.nvim")
 
 		-- Debug tools
-		use("puremourning/vimspector")
+		-- use("puremourning/vimspector")
 
 		-- jump to specific line, word, pattern etc
 		use({
@@ -214,20 +221,20 @@ return packer.startup({
 			end,
 		})
 
-		use({
-			"folke/noice.nvim",
-			config = function()
-				require("noice").setup()
-			end,
-			requires = {
-				-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-				"MunifTanjim/nui.nvim",
-				-- OPTIONAL:
-				--   `nvim-notify` is only needed, if you want to use the notification view.
-				--   If not available, we use `mini` as the fallback
-				"rcarriga/nvim-notify",
-			},
-		})
+		-- use({
+		-- 	"folke/noice.nvim",
+		-- 	config = function()
+		-- 		require("noice").setup()
+		-- 	end,
+		-- 	requires = {
+		-- 		-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+		-- 		"MunifTanjim/nui.nvim",
+		-- 		-- OPTIONAL:
+		-- 		--   `nvim-notify` is only needed, if you want to use the notification view.
+		-- 		--   If not available, we use `mini` as the fallback
+		-- 		"rcarriga/nvim-notify",
+		-- 	},
+		-- })
 
 		-- install without yarn or npm
 		use({ "iamcco/markdown-preview.nvim" })
@@ -270,7 +277,7 @@ return packer.startup({
 		use({ "kdheepak/lazygit.nvim" })
 
 		-- minimap
-		use("wfxr/minimap.vim")
+		-- use("wfxr/minimap.vim")
 
 		-- color 16
 		use({
@@ -288,6 +295,14 @@ return packer.startup({
 
 		-- vim bookmarks
 		use({ "MattesGroeger/vim-bookmarks" })
+
+		-- zen mode
+		use({
+			"folke/zen-mode.nvim",
+			config = function()
+				require("zen-mode").setup({})
+			end,
+		})
 
 		if packer_bootstrap then
 			require("packer").sync()
