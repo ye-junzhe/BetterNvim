@@ -304,6 +304,9 @@ return packer.startup({
 			end,
 		})
 
+		-- magit
+		use({ "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" })
+
 		if packer_bootstrap then
 			require("packer").sync()
 		end

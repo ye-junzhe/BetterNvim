@@ -78,7 +78,11 @@ vim.g.tagbar_ctags_bin = "/path/to/ctags/bin"
 
 ### Plugins
 
-`:w` => In [plugins-setup.lua](https://github.com/ye-junzhe/BetterNvim/blob/master/lua/Junzhe/plugins-setup.lua) to write the file and auto update neovim plugins
+#### ***The most important***
+
+- `:w` => In [plugins-setup.lua](https://github.com/ye-junzhe/BetterNvim/blob/master/lua/Junzhe/plugins-setup.lua) to write the file and auto update neovim plugins
+- Remember to call `:MasonUpdate` first time entering neovim, else there won't be any packages showing in the Mason panel
+- Be sure to install Meslo font to show icons properly (If you are using iterm2, just install [oh my zsh](https://github.com/ohmyzsh/ohmyzsh), and follow the instructions)
 
 ### Lsps
 
@@ -86,7 +90,7 @@ vim.g.tagbar_ctags_bin = "/path/to/ctags/bin"
 - All configs in [this folder](https://github.com/ye-junzhe/BetterNvim/tree/master/lua/Junzhe/plugins/lsp)
 - special setup for Rust development
 - I write C/C++ code a lot so I have special clangd setup as well, you can also modify it freely in this [file](https://github.com/ye-junzhe/BetterNvim/blob/master/lua/Junzhe/plugins/lsp/lspconfig.lua)
-
+  
 ### Syntax highlighting
 
 - `:TSInstall` => Install tree-sitter highlighting for specific language
