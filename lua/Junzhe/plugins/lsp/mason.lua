@@ -33,7 +33,7 @@ mason_lspconfig.setup({
 		"omnisharp_mono",
 		"golangci_lint_ls",
 		"texlab",
-		"solargraph",
+		-- "solargraph",
 		"rust_analyzer",
 		"yamlls",
 		"taplo",

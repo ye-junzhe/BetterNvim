@@ -215,10 +215,10 @@ lspconfig["texlab"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-lspconfig["solargraph"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
+-- lspconfig["solargraph"].setup({
+-- 	capabilities = capabilities,
+-- 	on_attach = on_attach,
+-- })
 -- lspconfig["rust_analyzer"].setup({
 -- 	capabilities = capabilities,
 -- 	on_attach = on_attach,
@@ -259,4 +259,15 @@ lspconfig["taplo"].setup({
 lspconfig["yamlls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+})
+lspconfig["tsserver"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	root_dir = lspconfig.util.root_pattern("package.json"),
+	single_file_support = false,
+})
+lspconfig["denols"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
 })

@@ -41,7 +41,7 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 opt.iskeyword:append("-") -- consider string-string as whole word
 
-vim.g.tagbar_ctags_bin = "/opt/homebrew/Cellar/universal-ctags/p6.0.20230409.0/bin/ctags"
+vim.g.tagbar_ctags_bin = "/opt/homebrew/Cellar/universal-ctags/p6.0.20230423.0/bin/ctags"
 
 -- Vimspector options
 -- Vimspector options
