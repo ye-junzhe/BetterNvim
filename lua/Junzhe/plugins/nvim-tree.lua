@@ -108,15 +108,4 @@ nvimtree.setup({
 			},
 		},
 	},
-	view = {
-		adaptive_size = true,
-		mappings = {
-			list = {
-				{ key = "i", action = "cd" },
-				{ key = "I", action = "dir_up" },
-				{ key = "<C-s>", action = "split" },
-				{ key = "O", action = "close_node" },
-			},
-		},
-	},
 })

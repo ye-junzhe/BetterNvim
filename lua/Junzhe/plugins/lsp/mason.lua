@@ -24,7 +24,6 @@ mason_lspconfig.setup({
 		"tsserver",
 		"html",
 		"cssls",
-		"tailwindcss",
 		"lua_ls",
 		"clangd",
 		"jedi_language_server",
