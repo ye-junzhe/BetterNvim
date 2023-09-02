@@ -33,6 +33,9 @@ Still developing, so there are many commented out lines for future adjustment
 
 ## Installation
 
+### Please install [Oh My Zsh](https://ohmyz.sh/#install:~:text=sh%20%2Dc%20%22%24(curl%20%2DfsSL%20https%3A//raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)%22) and [p10k](https://github.com/romkatv/powerlevel10k#oh-my-zsh:~:text=troubleshooting%20for%20help.-,Oh%20My%20Zsh,-Clone%20the%20repository) first
+
+
 ### Automatically
 
 To **Install** neovim run this command:
