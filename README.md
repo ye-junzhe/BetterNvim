@@ -17,7 +17,7 @@
 
 ## Introduction
 
-This repo is to setup a modern IDE for coding in neovim **(If run on Windows, need one modification ([see here](https://github.com/ye-junzhe/BetterNvim#:~:text=%60%3CD%2D%3E%60%20%3D%20%60Command%60%20on%20macOS%2C%20and%20it%20only%20works%20in%20neovide%2C%20changes%20needed%20if%20running%20on%20windows)))**
+This repo is to setup a modern IDE for coding in neovim **(Windows and Linux not tested)**
 
 With more than 70 plugins installed
 
@@ -104,7 +104,7 @@ Most Keybindings at [keymaps.lua](https://github.com/ye-junzhe/BetterNvim/blob/m
 
 The rest of the settings are in the corresponding lua file of the plugin
 
-`<D->` = `Command` on macOS, and it only works in neovide, changes needed if running on windows
+`<D->` = `Command` on macOS, and it only works in neovide
 
 **The `<leader>` key has been changed to `<space>`**
 # Basic
