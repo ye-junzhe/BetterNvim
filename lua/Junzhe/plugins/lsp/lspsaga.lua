@@ -10,12 +10,17 @@ saga.setup({
 	-- use enter to open file with definition preview
 	definition = {
 		edit = "<CR>",
+		keys = {
+			tabe = "o",
+			edit = "i",
+		},
 	},
 	ui = {
 		-- border type can be single,double,rounded,solid,shadow.
 		border = "rounded",
 		colors = require("catppuccin.groups.integrations.lsp_saga").custom_colors(),
 		kind = require("catppuccin.groups.integrations.lsp_saga").custom_kind(),
+		code_action = "",
 	},
 	symbol_in_winbar = {
 		separator = "  ",
