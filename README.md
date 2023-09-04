@@ -33,12 +33,11 @@ Still developing, so there are many commented out lines for future adjustment
 
 ## Installation
 
-### Please install [Oh My Zsh](https://ohmyz.sh/#install:~:text=sh%20%2Dc%20%22%24(curl%20%2DfsSL%20https%3A//raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)%22) and [p10k](https://github.com/romkatv/powerlevel10k#oh-my-zsh:~:text=troubleshooting%20for%20help.-,Oh%20My%20Zsh,-Clone%20the%20repository) first
-
+- ### Please install [Oh My Zsh](https://ohmyz.sh/#install:~:text=sh%20%2Dc%20%22%24(curl%20%2DfsSL%20https%3A//raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)%22) and [p10k](https://github.com/romkatv/powerlevel10k#oh-my-zsh:~:text=troubleshooting%20for%20help.-,Oh%20My%20Zsh,-Clone%20the%20repository) first
 
 ### Automatically
 
-To **Install** neovim run this command:
+To **Install** NeoVim run this command:
 (make sure you have git and bash installed before running)
 
 ```bash
@@ -81,11 +80,11 @@ vim.g.tagbar_ctags_bin = "/path/to/ctags/bin"
 
 ### Plugins
 
-#### ***The most important***
+### ***The most important***
 
 - `:w` => In [plugins-setup.lua](https://github.com/ye-junzhe/BetterNvim/blob/master/lua/Junzhe/plugins-setup.lua) to write the file and auto update neovim plugins
 - Remember to call `:MasonUpdate` first time entering neovim, else there won't be any packages showing in the Mason panel
-- Be sure to install Meslo font to show icons properly (If you are using iterm2, just install [oh my zsh](https://github.com/ohmyzsh/ohmyzsh), and follow the instructions)
+- Be sure to install Meslo font to show icons properly (If you are using iTerm2, just install [oh my zsh](https://github.com/ohmyzsh/ohmyzsh), and follow the instructions)
 
 ### Lsps
 
@@ -125,7 +124,7 @@ The rest of the settings are in the corresponding lua file of the plugin
 
 # Lspsaga
 gh => Hover doc
-gd => Definition
+gd => Definition(In definition window, o/i => edit)
 gf => Find definition and references
 <leader>o => show symbols(silimar to tagbar)
 <leader>a => Code actions
