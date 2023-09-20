@@ -43,13 +43,8 @@ opt.iskeyword:append("-") -- consider string-string as whole word
 
 vim.g.tagbar_ctags_bin = "/opt/homebrew/Cellar/universal-ctags/p6.0.20230423.0/bin/ctags"
 
--- Vimspector options
--- Vimspector options
-vim.cmd([[
-let g:vimspector_sidebar_width = 85
-let g:vimspector_bottombar_height = 15
-let g:vimspector_terminal_maxwidth = 70
-]])
+-- turn off swapfile
+opt.swapfile = false
 
 cmd([[
     " autocmd BufEnter *.* nohl | MinimapRefresh
@@ -60,13 +55,7 @@ cmd([[
     set nofoldenable
     set foldlevel=2
 
-    set wrap
     set winbar=%=%m\ %f
-
-    imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
-    smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
-    imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
-    smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
 ]])
 
 -- autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))

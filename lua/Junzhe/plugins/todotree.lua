@@ -1,31 +1,30 @@
-local status, todotree = pcall(require, "todo-comments")
-if not status then
-	return
-end
-
-local keymap = vim.keymap
-
 -- PERF:
 -- HACK:
 -- TODO:
 -- NOTE:
 -- FIX:
 -- WARNING:
---@OPTIMIZE:
+-- @OPTIMIZE:
 
-todotree.setup({
-	keymap.set("n", "]t", function()
-		require("todo-comments").jump_next()
-	end, { desc = "Next todo comment" }),
+return {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+        require("todo-comments").setup()
+        local keymap = vim.keymap
+        keymap.set("n", "]t", function()
+            require("todo-comments").jump_next()
+        end, { desc = "Next todo comment" })
 
-	keymap.set("n", "[t", function()
-		require("todo-comments").jump_prev()
-	end, { desc = "Previous todo comment" }), -- You can also specify a list of valid jump keywords
+        keymap.set("n", "[t", function()
+            require("todo-comments").jump_prev()
+        end, { desc = "Previous todo comment" })
 
-	keymap.set("n", "]t", function()
-		require("todo-comments").jump_next({ keywords = { "ERROR", "WARNING" } })
-	end, { desc = "Next error/warning todo comment" }),
-	keymap.set("n", "<leader>r", ":TodoLocList<CR>"),
-	keymap.set("n", "<leader>rt", ":TodoTelescope<CR>"),
-	keymap.set("n", "<leader>fq", ":TodoQuickFix<CR>"),
-})
+        keymap.set("n", "]t", function()
+            require("todo-comments").jump_next({ keywords = { "ERROR", "WARNING" } })
+        end, { desc = "Next error/warning todo comment" })
+        -- keymap.set("n", "<leader>t", ":TodoLocList<CR>")
+        keymap.set("n", "<leader>ft", ":TodoTelescope<CR>", { desc = "TODOs" })
+        keymap.set("n", "<leader>fq", ":TodoQuickFix<CR>", { desc = "TodoQuickFix" })
+    end,
+}
