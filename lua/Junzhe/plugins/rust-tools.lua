@@ -14,9 +14,9 @@ return {
 
                     -- references
                     opts.desc = "Show LSP references"
-                    keymap.set("n", "gF", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
+                    keymap.set("n", "gf", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
                     opts.desc = "Show Lspsaga find"
-                    keymap.set("n", "gf", "<cmd>Lspsaga finder<CR>", opts) -- show definition, references
+                    keymap.set("n", "gF", "<cmd>Lspsaga finder<CR>", opts) -- show definition, references
 
                     -- outline
                     opts.desc = "Lspsaga outline"

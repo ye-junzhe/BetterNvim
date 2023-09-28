@@ -50,6 +50,8 @@ cmd([[
     " autocmd BufEnter *.* nohl | MinimapRefresh
     set mousescroll=ver:1,hor:1
 
+    set wrap
+
     set foldmethod=indent   
     set foldnestmax=10
     set nofoldenable
