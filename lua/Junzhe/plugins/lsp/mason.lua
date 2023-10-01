@@ -35,8 +35,6 @@ return {
                 "pyright",
                 "jsonls",
                 "omnisharp_mono",
-                "golangci_lint_ls",
-                "texlab",
                 "rust_analyzer",
                 "yamlls",
                 "taplo",
