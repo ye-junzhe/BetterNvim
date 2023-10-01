@@ -7,9 +7,6 @@ return {
         vim.g.loaded = 1
         vim.g.loaded_netrwPlugin = 1
 
-        -- change color for arrows in tree
-        vim.cmd([[ highlight NvimTreeIndentMarker guifg=#A6E3A1]])
-
         local function on_attach(bufnr)
             local api = require("nvim-tree.api")
 
