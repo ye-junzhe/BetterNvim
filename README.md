@@ -19,10 +19,6 @@
 
 This repo is to setup a modern IDE for coding in neovim **(Windows and Linux not tested)**
 
-With more than 70 plugins installed
-
-Still developing, so there are many commented out lines for future adjustment
-
 - VSCode-like Auto-completion setup
 - Plugin Manager: [Lazy.nvim](https://github.com/folke/lazy.nvim)
 - Mason for native neovim LSP management
@@ -59,7 +55,7 @@ mv $HOME/.config/nvim $HOME/.config/nvim.old
 1.Cloning the repository
 
 ```bash
-git clone https://github.com/ye-junzhe/BetterNvim.git $HOME/.config/nvim
+git clone --depth 1 https://github.com/ye-junzhe/BetterNvim.git $HOME/.config/nvim
 ```
 
 ## Plugins and Lsps and Highlighting
