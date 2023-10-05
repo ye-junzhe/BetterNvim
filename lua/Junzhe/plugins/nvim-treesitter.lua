@@ -49,6 +49,17 @@ return {
                 "glsl",
                 "latex",
                 "cpp",
+                "c",
+                "query",
+            },
+            incremental_selection = {
+                enable = true,
+                keymaps = {
+                    init_selection = "<C-i>",
+                    node_incremental = "<C-i>",
+                    scope_incremental = false,
+                    node_decremental = "<bs>",
+                },
             },
             -- enable nvim-ts-context-commentstring plugin for commenting tsx and jsx
             context_commentstring = {
