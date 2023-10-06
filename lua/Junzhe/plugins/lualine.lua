@@ -2,31 +2,11 @@ return {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
+
         local lualine = require("lualine")
         local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
-        local colors_nightfly = {
-            blue = "#65D1FF",
-            green = "#3EFFDC",
-            violet = "#FF61EF",
-            yellow = "#FFDA7B",
-            red = "#FF4A4A",
-            fg = "#c3ccdc",
-            bg = "#112638",
-            inactive_bg = "#2c3043",
-        }
-        local colors_catppuccin = {
-            bg = "#1E1E2E",
-            fg = "#CDD6F4",
-            yellow = "#F9E2AF",
-            green = "#A6E3A1",
-            blue = "#89B4FA",
-            red = "#F38BA8",
-        }
-
-        local colors_table = { colors_nightfly, colors_catppuccin }
-
-        local colors = colors_table[1]
+        local colors = LUALINE_COLORSCHEME
 
         local conditions = {
             buffer_not_empty = function()
@@ -72,9 +52,16 @@ return {
         local config = {
             options = {
                 theme = my_lualine_theme,
+                component_separators = '',
+                section_separators = '',
             },
             sections = {
                 -- these are to remove the defaults
+                lualine_b = {{
+                    'branch',
+                    -- icon = '',
+                    color = { fg = "#A6E3A1", gui = 'bold' },
+                }},
                 lualine_c = {},
                 lualine_x = {},
             },
@@ -92,15 +79,9 @@ return {
 
         ins_left({
             "filename",
+            path = 3,
             cond = conditions.buffer_not_empty,
             color = { fg = colors.blue, gui = "bold" },
-        })
-
-        ins_left({
-            -- filesize component
-            "filesize",
-            color = { fg = colors.blue, gui = "bold" },
-            cond = conditions.buffer_not_empty,
         })
 
         -- Insert mid section. You can make any number of sections in neovim :)
@@ -144,6 +125,14 @@ return {
                 unix = "", -- e711
                 dos = "", -- e70f
             },
+            color = { fg = "f5c2e7" , gui = 'bold' },
+        })
+
+        ins_right({
+            -- filesize component
+            "filesize",
+            color = { fg = colors.blue, gui = "bold" },
+            cond = conditions.buffer_not_empty,
         })
 
         -- Add components to right sections

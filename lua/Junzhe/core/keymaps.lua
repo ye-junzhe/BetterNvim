@@ -41,8 +41,8 @@ keymap.set("n", "<D-k>", ":tabclose<CR>") -- close current tab
 -- adjust the split window
 keymap.set("n", "<up>", ":res -5<CR>")
 keymap.set("n", "<down>", ":res +5<CR>")
-keymap.set("n", "<left>", ":vertical resize+5<CR>")
-keymap.set("n", "<right>", ":vertical resize-5<CR>")
+keymap.set("n", "<right>", ":vertical resize+5<CR>")
+keymap.set("n", "<left>", ":vertical resize-5<CR>")
 
 ----------------------
 -- Plugin Keybinds

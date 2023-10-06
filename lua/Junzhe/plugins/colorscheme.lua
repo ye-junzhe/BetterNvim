@@ -17,12 +17,40 @@ local colorschemes = {
         config = function()
             vim.cmd([[
                 colorscheme catppuccin-mocha
-                vim.cmd([[ highlight NvimTreeIndentMarker guifg=#A6E3A1
+                highlight NvimTreeIndentMarker guifg=#A6E3A1
+                highlight NvimTreeFolderArrowClosed guifg=#A6E3A1
+                highlight NvimTreeFolderArrowOpen guifg=#A6E3A1
                 ]])
         end,
     },
 }
 
+local lualine_colorscheme = {
+    -- catppuccin-mocha
+    {
+        blue = "#65D1FF",
+        green = "#3EFFDC",
+        violet = "#FF61EF",
+        yellow = "#FFDA7B",
+        red = "#FF4A4A",
+        fg = "#c3ccdc",
+        bg = "#112638",
+        inactive_bg = "#2c3043",
+    },
+
+    -- nightfly
+    {
+        bg = "#1E1E2E",
+        fg = "#CDD6F4",
+        yellow = "#F9E2AF",
+        green = "#A6E3A1",
+        blue = "#89B4FA",
+        red = "#F38BA8",
+    }
+}
+
+LUALINE_COLORSCHEME = lualine_colorscheme[2] -- lualine theme
+
 return {
-    colorschemes[1],
+    colorschemes[2], -- main theme
 }
