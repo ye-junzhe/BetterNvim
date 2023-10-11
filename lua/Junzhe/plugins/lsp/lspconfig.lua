@@ -107,14 +107,13 @@ return {
             on_attach = on_attach,
         })
 
-        -- configure tailwindcss server
-        lspconfig["tailwindcss"].setup({
+        -- configure python server
+        lspconfig["jedi_language_server"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
         })
 
-        -- configure python server
-        lspconfig["pyright"].setup({
+        lspconfig["marksman"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
         })

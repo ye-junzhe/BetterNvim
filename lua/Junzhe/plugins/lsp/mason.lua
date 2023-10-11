@@ -31,12 +31,13 @@ return {
                 "cssls",
                 "lua_ls",
                 "clangd",
-                "pyright",
+                "jedi_language_server",
                 "jsonls",
                 "omnisharp_mono",
                 "rust_analyzer",
                 "yamlls",
                 "taplo",
+                "marksman",
             },
             -- auto-install configured servers (with lspconfig)
             automatic_installation = true, -- not the same as ensure_installed
