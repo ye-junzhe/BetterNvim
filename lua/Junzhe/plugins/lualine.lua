@@ -57,11 +57,7 @@ return {
             },
             sections = {
                 -- these are to remove the defaults
-                lualine_b = {{
-                    'branch',
-                    -- icon = '',
-                    color = { fg = "#A6E3A1", gui = 'bold' },
-                }},
+                lualine_b = {},
                 lualine_c = {},
                 lualine_x = {},
             },
@@ -78,11 +74,25 @@ return {
         end
 
         ins_left({
-            "filename",
-            path = 3,
-            cond = conditions.buffer_not_empty,
-            color = { fg = colors.blue, gui = "bold" },
+            'branch',
+            -- icon = '',
+            color = { fg = "#A6E3A1", gui = 'bold' },
         })
+
+
+        ins_left {
+            'diff',
+            color = { fg = "#A6E3A1", gui = 'bold' },
+            cond = conditions.hide_in_width,
+        }
+
+        -- ins_left({
+        --     "filename",
+        --     path = 3,
+        --     shorting_target = 40,
+        --     cond = conditions.buffer_not_empty,
+        --     color = { fg = colors.blue, gui = "bold" },
+        -- })
 
         -- Insert mid section. You can make any number of sections in neovim :)
         -- for lualine it's any number greater then 2
@@ -110,8 +120,20 @@ return {
                 return msg
             end,
             icon = " LSP:",
-            color = { bg = colors.base, fg = colors.blue, gui = "bold" },
+            color = { bg = colors.base, fg = colors.green, gui = "bold" },
         })
+
+        ins_left {
+            'diagnostics',
+            sources = { 'nvim_diagnostic' },
+            symbols = { error = ' ', warn = ' ', info = ' ' },
+            diagnostics_color = {
+                color_error = { fg = colors.red },
+                color_warn = { fg = colors.yellow },
+                color_info = { fg = colors.cyan },
+            },
+        }
+
 
         ins_right({
             lazy_status.updates,
@@ -131,7 +153,7 @@ return {
         ins_right({
             -- filesize component
             "filesize",
-            color = { fg = colors.blue, gui = "bold" },
+            color = { fg = colors.green, gui = "bold" },
             cond = conditions.buffer_not_empty,
         })
 
