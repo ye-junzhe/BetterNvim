@@ -15,6 +15,20 @@
 ![BetterNvim Coding1](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/pic/Coding1.png?raw=true)
 ![BetterNvim Term](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/pic/Term.png?raw=true)
 
+<!--toc:start-->
+- [Preview](#preview)
+- [Introduction](#introduction)
+- [Installation](#installation)
+  - [Nerd font required](#nerd-font-required)
+  - [Automatically](#automatically)
+  - [Manual](#manual)
+- [Plugins and Lsps and Highlighting](#plugins-and-lsps-and-highlighting)
+  - [Plugins](#plugins)
+  - [**_The most important_**](#the-most-important)
+  - [Lsps](#lsps)
+  - [Syntax highlighting](#syntax-highlighting)
+<!--toc:end-->
+
 ## Introduction
 
 This repo is to setup a modern IDE for coding in neovim **(Windows and Linux not tested)**
@@ -29,7 +43,9 @@ This repo is to setup a modern IDE for coding in neovim **(Windows and Linux not
 
 ## Installation
 
-- ### Please install [Oh My Zsh](<https://ohmyz.sh/#install:~:text=sh%20%2Dc%20%22%24(curl%20%2DfsSL%20https%3A//raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)%22>) and [p10k](https://github.com/romkatv/powerlevel10k#oh-my-zsh:~:text=troubleshooting%20for%20help.-,Oh%20My%20Zsh,-Clone%20the%20repository) first
+### Nerd font required
+
+- Please install nerdfonts first - https://www.nerdfonts.com/
 
 ### Automatically
 
@@ -87,7 +103,7 @@ git clone --depth 1 https://github.com/ye-junzhe/BetterNvim.git $HOME/.config/nv
 Keybindings at [keymaps.lua](https://github.com/ye-junzhe/BetterNvim/blob/master/lua/Junzhe/core/keymaps.lua)
 And the rest of are in the corresponding *.lua file of the plugin
 
-`<D->` = `Command` on macOS, and it only works in neovide
+`<D->` = `Command` on macOS
 
 **The `<leader>` key has been changed to `<space>`**
 # Basic

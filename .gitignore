@@ -1,3 +1,5 @@
 **.DS_Store
 
 lazy-lock.json
+
+lua/Junzhe/plugins/transparent.lua
