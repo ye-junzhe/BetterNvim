@@ -8,6 +8,7 @@ return {
             let g:bookmark_sign = '书'
             let g:bookmark_annotation_sign = '记'
             let g:bookmark_highlight_lines = 1
+            unmap mp
             ]])
     end,
 }
