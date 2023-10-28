@@ -11,9 +11,8 @@
 ## Preview
 
 ![BetterNvim Dashboard](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/pic/Dashboard.png?raw=true)
-![BetterNvim Demo](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/pic/Coding.png?raw=true)
-![BetterNvim Coding1](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/pic/Coding1.png?raw=true)
-![BetterNvim Term](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/pic/Term.png?raw=true)
+![BetterNvim Coding](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/pic/Coding.png?raw=true)
+![BetterNvim HoverDoc](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/pic/HoverDoc.png?raw=true)
 
 <!--toc:start-->
 - [Preview](#preview)
@@ -36,8 +35,8 @@ This repo is to setup a modern IDE for coding in neovim **(Windows and Linux not
 - VSCode-like Auto-completion setup
 - Plugin Manager: [Lazy.nvim](https://github.com/folke/lazy.nvim)
 - Mason for native neovim LSP management
-- treesitter for highlighting
-- Plugins: Lspsaga, barbar, lualine, nvim-tree, vimspector, todotree ...
+- Tree-sitter for highlighting
+- Plugins: Lspsaga, Barbar, Lualine, Nvim-tree, Nvim-cmp, Todotree ...
 - **[Neovide](https://neovide.dev/) recommended**
 - Font recommend: [JetBrainsMono](https://www.jetbrains.com/lp/mono/) Nerd Font Mono
 
@@ -78,28 +77,26 @@ git clone --depth 1 https://github.com/ye-junzhe/BetterNvim.git $HOME/.config/nv
 
 ### Plugins
 
-### **_The most important_**
+### ***The most important***
 
-- `:w` => In [plugins-setup.lua](https://github.com/ye-junzhe/BetterNvim/blob/master/lua/Junzhe/plugins-setup.lua) to write the file and auto update neovim plugins
+- Call `:Lazy` the first time you open nvim, and then press `U` to update all the plugins
 - Remember to call `:MasonUpdate` first time entering neovim, else there won't be any packages showing in the Mason panel
-- Be sure to install Meslo font to show icons properly (If you are using iTerm2, just install [oh my zsh](https://github.com/ohmyzsh/ohmyzsh), and follow the instructions)
+- Be sure to install Nerd font to show icons properly (If you are using iTerm2, just install [oh my zsh](https://github.com/ohmyzsh/ohmyzsh), and follow the instructions)
 
 ### Lsps
 
 - `:Mason` => Install Lsps(g? for help)
 - All configs in [this folder](https://github.com/ye-junzhe/BetterNvim/tree/master/lua/Junzhe/plugins/lsp)
-- special setup for Rust development
-- I write C/C++ code a lot so I have special clangd setup as well, you can also modify it freely in this [file](https://github.com/ye-junzhe/BetterNvim/blob/master/lua/Junzhe/plugins/lsp/lspconfig.lua)
+- special setup for Rust development using rust-tools
 
 ### Syntax highlighting
 
-- `:TSInstall` => Install tree-sitter highlighting for specific language
+- `:TSInstall` => Install Tree-sitter highlighting for specific language
 - Configs in [treesitter.lua](https://github.com/ye-junzhe/BetterNvim/blob/master/lua/Junzhe/plugins/treesitter.lua)
-
-```
 
 ## Keybindings 🎥
 
+```
 Keybindings at [keymaps.lua](https://github.com/ye-junzhe/BetterNvim/blob/master/lua/Junzhe/core/keymaps.lua)
 And the rest of are in the corresponding *.lua file of the plugin
 
@@ -130,6 +127,7 @@ gf => Find definition and references
 Shift+h => Switch left
 Shift+l => Switch right
 mp => BufferPick
+ctrl-p => BufferCloseAllButCurrentOrPinned
 
 # Navigation
 ctrl + h/j/k/l => navigate windows
@@ -147,6 +145,6 @@ mm => Create and delete
 mi => Add annotation
 mc => Clear bookmarks
 mx => Clear in all buffers
-mn, mp => Navigate
+mn => Next bookmark
 ma => Show all
 ```
