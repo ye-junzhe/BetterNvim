@@ -44,6 +44,9 @@ keymap.set("n", "<down>", ":res +5<CR>")
 keymap.set("n", "<right>", ":vertical resize+5<CR>")
 keymap.set("n", "<left>", ":vertical resize-5<CR>")
 
+-- show absolute file path
+keymap.set("n", "<C-g>", ":echo expand('%:p')<CR>")
+
 ----------------------
 -- Plugin Keybinds
 ----------------------

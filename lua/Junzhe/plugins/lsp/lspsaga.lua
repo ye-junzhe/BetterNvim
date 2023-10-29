@@ -12,8 +12,10 @@ return {
             definition = {
                 edit = "<CR>",
                 keys = {
-                    tabe = "o",
-                    edit = "i",
+                    edit = "o",
+                    tabe = "i",
+                    vsplit = "s",
+                    split = "S",
                 },
             },
             ui = {
