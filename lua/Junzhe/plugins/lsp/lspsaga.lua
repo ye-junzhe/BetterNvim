@@ -26,7 +26,7 @@ return {
             symbol_in_winbar = {
                 separator = "  ",
                 respect_root = true,
-                folder_level = 3,
+                folder_level = 0,
             },
         })
         vim.keymap.set("n", "<leader>dw", ":Lspsaga show_workspace_diagnostics<CR>")
