@@ -62,3 +62,6 @@ keymap.set("n", "<leader>lg", ":LazyGit<CR>")
 
 -- open register
 vim.keymap.set("n", "<leader>fg", ":registers<CR>")
+
+-- Neogit
+vim.keymap.set("n", "<leader>gg", ":Neogit<CR>")
