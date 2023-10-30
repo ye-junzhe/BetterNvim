@@ -73,12 +73,31 @@ return {
             table.insert(config.sections.lualine_x, component)
         end
 
+        -- multicursors.nvim integration
+        ins_left({
+            function ()
+                local ok, hydra = pcall(require, 'hydra.statusline')
+                if ok then
+                    return hydra.get_name()
+                end
+                return ''
+            end,
+            cond = function ()
+                local ok, hydra = pcall(require, 'hydra.statusline')
+                return ok and hydra.is_active()
+            end,
+            color = {
+                fg = "#1E1E2E",
+                bg = colors.red,
+                gui = 'bold',
+            },
+        })
+
         ins_left({
             'branch',
             -- icon = '',
             color = { fg = "#A6E3A1", gui = 'bold' },
         })
-
 
         ins_left {
             'diff',
@@ -86,13 +105,19 @@ return {
             cond = conditions.hide_in_width,
         }
 
-        -- ins_left({
-        --     "filename",
-        --     path = 3,
-        --     shorting_target = 40,
-        --     cond = conditions.buffer_not_empty,
-        --     color = { fg = colors.blue, gui = "bold" },
-        -- })
+        ins_left({
+            "filename",
+            path = 1,
+            shorting_target = 40,
+            cond = conditions.buffer_not_empty,
+            symbols = {
+                modified = '[󰷥]',      -- Text to show when the file is modified.
+                readonly = '[]',      -- Text to show when the file is non-modifiable or readonly.
+                unnamed = '[匿]', -- Text to show for unnamed buffers.
+                newfile = '[]',     -- Text to show for newly created file before first write
+            },
+            color = { fg = colors.blue, gui = "bold" },
+        })
 
         -- Insert mid section. You can make any number of sections in neovim :)
         -- for lualine it's any number greater then 2
@@ -134,20 +159,26 @@ return {
             },
         }
 
-
         ins_right({
             lazy_status.updates,
             cond = lazy_status.has_updates,
-            color = { fg = "#ff9e64" },
+            color = { fg = "#FF9E64" },
+        })
+
+        ins_right({
+            "datetime",
+            -- options: default, us, uk, iso, or your own format string ("%H:%M", etc..)
+            style = 'default',
+            color = { fg = colors.blue, gui = "bold" },
         })
 
         ins_right({
             "fileformat",
             symbols = {
-                unix = "", -- e711
+                unix = "Mc", -- e711
                 dos = "", -- e70f
             },
-            color = { fg = "f5c2e7" , gui = 'bold' },
+            color = { fg = "#F5C2E7" , gui = 'bold' },
         })
 
         ins_right({
