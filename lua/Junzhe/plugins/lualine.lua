@@ -107,7 +107,7 @@ return {
 
         ins_left({
             "filename",
-            path = 1,
+            path = 0,
             shorting_target = 40,
             cond = conditions.buffer_not_empty,
             symbols = {
@@ -116,7 +116,7 @@ return {
                 unnamed = '[匿]', -- Text to show for unnamed buffers.
                 newfile = '[]',     -- Text to show for newly created file before first write
             },
-            color = { fg = colors.blue, gui = "bold" },
+            color = { bg = colors.base, fg = colors.blue, gui = "bold" },
         })
 
         -- Insert mid section. You can make any number of sections in neovim :)
@@ -165,12 +165,12 @@ return {
             color = { fg = "#FF9E64" },
         })
 
-        ins_right({
-            "datetime",
-            -- options: default, us, uk, iso, or your own format string ("%H:%M", etc..)
-            style = 'default',
-            color = { fg = colors.blue, gui = "bold" },
-        })
+        -- ins_right({
+        --     "datetime",
+        --     -- options: default, us, uk, iso, or your own format string ("%H:%M", etc..)
+        --     style = 'default',
+        --     color = { fg = colors.blue, gui = "bold" },
+        -- })
 
         ins_right({
             "fileformat",
