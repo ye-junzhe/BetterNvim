@@ -36,7 +36,7 @@ This repo is to setup a modern IDE for coding in neovim **(Windows and Linux not
 - Plugin Manager: [Lazy.nvim](https://github.com/folke/lazy.nvim)
 - Mason for native neovim LSP management
 - Tree-sitter for highlighting
-- Plugins: Lspsaga, Barbar, Lualine, Nvim-tree, Nvim-cmp, Todotree ...
+- Plugins: Lspsaga, Barbar, Lualine, Nvim-tree, Nvim-cmp, Todotree, Neogit ...
 - **[Neovide](https://neovide.dev/) recommended**
 - Font recommend: [JetBrainsMono](https://www.jetbrains.com/lp/mono/) Nerd Font Mono
 
@@ -147,4 +147,7 @@ mc => Clear bookmarks
 mx => Clear in all buffers
 mn => Next bookmark
 ma => Show all
+
+# Neogit(Magit clone for Neovim)
+<leader>gg => Open Neogit
 ```
