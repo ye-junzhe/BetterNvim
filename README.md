@@ -44,7 +44,7 @@ This repo is to setup a modern IDE for coding in neovim **(Windows and Linux not
 
 ### Nerd font required
 
-- Please install nerdfonts first - https://www.nerdfonts.com/
+- To show glyphs properly, please install nerdfonts first - https://www.nerdfonts.com/
 
 ### Automatically
 
@@ -81,7 +81,6 @@ git clone --depth 1 https://github.com/ye-junzhe/BetterNvim.git $HOME/.config/nv
 
 - Call `:Lazy` the first time you open nvim, and then press `U` to update all the plugins
 - Remember to call `:MasonUpdate` first time entering neovim, else there won't be any packages showing in the Mason panel
-- Be sure to install Nerd font to show icons properly (If you are using iTerm2, just install [oh my zsh](https://github.com/ohmyzsh/ohmyzsh), and follow the instructions)
 
 ### Lsps
 
