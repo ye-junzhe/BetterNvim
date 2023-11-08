@@ -18,19 +18,20 @@
 - [Preview](#preview)
 - [Introduction](#introduction)
 - [Installation](#installation)
-  - [Nerd font required](#nerd-font-required)
-  - [Automatically](#automatically)
-  - [Manual](#manual)
+  - [To show glyphs properly, please install nerdfonts first](#to-show-glyphs-properly-please-install-nerdfonts-first)
+  - [Optional: Backup existing nvim config](#optional-backup-existing-nvim-config)
+  - [Clone the repository](#clone-the-repository)
 - [Plugins and Lsps and Highlighting](#plugins-and-lsps-and-highlighting)
   - [Plugins](#plugins)
-  - [**_The most important_**](#the-most-important)
+  - [***The most important***](#the-most-important)
   - [Lsps](#lsps)
   - [Syntax highlighting](#syntax-highlighting)
+- [Keybindings 🎥](#keybindings-🎥)
 <!--toc:end-->
 
 ## Introduction
 
-This repo is to setup a modern IDE for coding in neovim **(Windows and Linux not tested)**
+This repo is to setup a modern IDE for coding in neovim **(Works on both macOS and Linux)**
 
 - VSCode-like Auto-completion setup
 - Plugin Manager: [Lazy.nvim](https://github.com/folke/lazy.nvim)
@@ -42,35 +43,26 @@ This repo is to setup a modern IDE for coding in neovim **(Windows and Linux not
 
 ## Installation
 
-### Nerd font required
+### To show glyphs properly, please install nerdfonts first
 
 - To show glyphs properly, please install nerdfonts first - https://www.nerdfonts.com/
 
-### Automatically
-
-To **Install** NeoVim run this command:
-(make sure you have git and bash installed before running)
-
-```bash
-curl -s https://raw.githubusercontent.com/ye-junzhe/BetterNvim/master/install.sh | bash -s
-```
-
-### Manual
-
-Install it manually by:
-
-**Optional**: Backup existing nvim config
+### Optional: Backup existing nvim config
 
 ```bash
 mv $HOME/.config/nvim $HOME/.config/nvim.old
 ```
 
-**Mandatory**
-
-1.Cloning the repository
+### Clone the repository
 
 ```bash
 git clone --depth 1 https://github.com/ye-junzhe/BetterNvim.git $HOME/.config/nvim
+```
+
+- **IF ON LINUX**
+
+```bash
+git clone --depth 1 https://github.com/ye-junzhe/BetterNvim.git -b linux $HOME/.config/nvim
 ```
 
 ## Plugins and Lsps and Highlighting
