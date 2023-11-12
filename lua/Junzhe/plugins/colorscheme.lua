@@ -20,6 +20,7 @@ local colorschemes = {
                 highlight NvimTreeIndentMarker guifg=#A6E3A1
                 highlight NvimTreeFolderArrowClosed guifg=#A6E3A1
                 highlight NvimTreeFolderArrowOpen guifg=#A6E3A1
+                highlight WinSeparator guifg=#A6E3A1
                 ]])
         end,
     },
