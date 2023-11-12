@@ -175,7 +175,8 @@ return {
         ins_right({
             "fileformat",
             symbols = {
-                unix = "Mc", -- e711
+                -- unix = "Mc", -- e711
+                unix = "", -- f306
                 dos = "", -- e70f
             },
             color = { fg = "#F5C2E7" , gui = 'bold' },
