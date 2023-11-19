@@ -20,32 +20,32 @@ return {
             normal = {
                 a = { bg = colors.blue, fg = colors.bg, gui = "bold" },
                 b = { bg = colors.bg, fg = colors.fg },
-                c = { bg = colors.bg, fg = colors.fg },
+                c = { bg = colors.innerbg, fg = colors.fg },
             },
             insert = {
                 a = { bg = colors.green, fg = colors.bg, gui = "bold" },
                 b = { bg = colors.bg, fg = colors.fg },
-                c = { bg = colors.bg, fg = colors.fg },
+                c = { bg = colors.innerbg, fg = colors.fg },
             },
             visual = {
                 a = { bg = "#CBA6F8", fg = colors.bg, gui = "bold" },
                 b = { bg = colors.bg, fg = colors.fg },
-                c = { bg = colors.bg, fg = colors.fg },
+                c = { bg = colors.innerbg, fg = colors.fg },
             },
             command = {
                 a = { bg = colors.yellow, fg = colors.bg, gui = "bold" },
                 b = { bg = colors.bg, fg = colors.fg },
-                c = { bg = colors.bg, fg = colors.fg },
+                c = { bg = colors.innerbg, fg = colors.fg },
             },
             replace = {
                 a = { bg = colors.red, fg = colors.bg, gui = "bold" },
                 b = { bg = colors.bg, fg = colors.fg },
-                c = { bg = colors.bg, fg = colors.fg },
+                c = { bg = colors.innerbg, fg = colors.fg },
             },
             inactive = {
                 a = { bg = colors.inactive_bg, fg = colors.semilightgray, gui = "bold" },
                 b = { bg = colors.inactive_bg, fg = colors.semilightgray },
-                c = { bg = colors.inactive_bg, fg = colors.semilightgray },
+                c = { bg = colors.innerbg, fg = colors.semilightgray },
             },
         }
         -- Config
@@ -87,7 +87,7 @@ return {
                 return ok and hydra.is_active()
             end,
             color = {
-                fg = "#1E1E2E",
+                fg = colors.bg,
                 bg = colors.red,
                 gui = 'bold',
             },
@@ -96,12 +96,12 @@ return {
         ins_left({
             'branch',
             -- icon = '',
-            color = { fg = "#A6E3A1", gui = 'bold' },
+            color = { fg = colors.green, gui = 'bold' },
         })
 
         ins_left {
             'diff',
-            color = { fg = "#A6E3A1", gui = 'bold' },
+            color = { fg = colors.green, gui = 'bold' },
             cond = conditions.hide_in_width,
         }
 
@@ -116,7 +116,7 @@ return {
                 unnamed = '[匿]', -- Text to show for unnamed buffers.
                 newfile = '[]',     -- Text to show for newly created file before first write
             },
-            color = { bg = colors.base, fg = colors.blue, gui = "bold" },
+            color = { fg = colors.blue, gui = "bold" },
         })
 
         -- Insert mid section. You can make any number of sections in neovim :)
@@ -162,7 +162,7 @@ return {
         ins_right({
             lazy_status.updates,
             cond = lazy_status.has_updates,
-            color = { fg = "#FF9E64" },
+            color = { fg = colors.orange },
         })
 
         -- ins_right({
@@ -179,7 +179,7 @@ return {
                 unix = "", -- f306
                 dos = "", -- e70f
             },
-            color = { fg = "#F5C2E7" , gui = 'bold' },
+            color = { fg = colors.pink , gui = 'bold' },
         })
 
         ins_right({

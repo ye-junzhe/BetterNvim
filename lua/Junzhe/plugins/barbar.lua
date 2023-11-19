@@ -19,8 +19,8 @@ return {
         keymap.set('n', '<S-H>', '<Cmd>BufferPrevious<CR>', opts)
         keymap.set('n', '<S-L>', '<Cmd>BufferNext<CR>', opts)
         -- Re-order to previous/next
-        keymap.set('n', '<A-<>', '<Cmd>BufferMovePrevious<CR>', opts)
-        keymap.set('n', '<A->>', '<Cmd>BufferMoveNext<CR>', opts)
+        keymap.set('n', '<S-B>', '<Cmd>BufferMovePrevious<CR>', opts)
+        keymap.set('n', '<S-F>', '<Cmd>BufferMoveNext<CR>', opts)
         -- Goto buffer in position...
         keymap.set('n', '<A-1>', '<Cmd>BufferGoto 1<CR>', opts)
         keymap.set('n', '<A-2>', '<Cmd>BufferGoto 2<CR>', opts)
