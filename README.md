@@ -87,14 +87,16 @@ git clone --depth 1 https://github.com/ye-junzhe/BetterNvim.git -b linux $HOME/.
 
 ## Keybindings 🎥
 
-```
 Keybindings at [keymaps.lua](https://github.com/ye-junzhe/BetterNvim/blob/master/lua/Junzhe/core/keymaps.lua)
 And the rest of are in the corresponding *.lua file of the plugin
 
 `<D->` = `Command` on macOS
 
 **The `<leader>` key has been changed to `<space>`**
+
 # Basic
+
+```bash
 <leader>e => nvim-tree (g? for help)
 
 # Telescope
