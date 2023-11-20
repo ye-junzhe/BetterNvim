@@ -94,7 +94,7 @@ And the rest of are in the corresponding *.lua file of the plugin
 
 **The `<leader>` key has been changed to `<space>`**
 
-# Basic
+### Basic
 
 ```bash
 <leader>e => nvim-tree (g? for help)
