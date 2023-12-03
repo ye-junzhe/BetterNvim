@@ -82,7 +82,7 @@ return {
                 " highlight BufferCurrentIcon guibg=NONE
                 highlight BufferCurrentIndex guibg=NONE
                 " highlight BufferCurrentINFO guibg=NONE
-                highlight BufferCurrentMod guibg=NONE
+                highlight BufferCurrentMod guibg=NONE guifg=#A6E3A1
                 highlight BufferCurrentNumber guibg=NONE
                 highlight BufferCurrentSign guibg=NONE
                 highlight BufferCurrentSignRight guibg=NONE
