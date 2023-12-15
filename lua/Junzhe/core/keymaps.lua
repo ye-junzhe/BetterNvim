@@ -52,7 +52,7 @@ keymap.set("n", "<C-g>", ":echo expand('%:p')<CR>")
 ----------------------
 
 -- Tagbar
-keymap.set("n", "<leader>q", ":TagbarToggle<CR>")
+-- keymap.set("n", "<leader>q", ":TagbarToggle<CR>")
 
 -- diffview
 keymap.set("n", "<leader>fd", ":DiffviewFileHistory<CR>")
