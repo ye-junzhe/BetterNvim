@@ -13,6 +13,8 @@
 ![BetterNvim Dashboard](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/pic/Dashboard.png?raw=true)
 ![BetterNvim Coding](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/pic/Coding.png?raw=true)
 ![BetterNvim HoverDoc](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/pic/HoverDoc.png?raw=true)
+![BetterNvim Errors](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/pic/Errors.png?raw=true)
+![BetterNvim FloatTerm](https://github.com/ye-junzhe/Images/blob/main/BetterNvim/pic/FloatTerm.png?raw=true)
 
 <!--toc:start-->
 - [Preview](#preview)
