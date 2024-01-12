@@ -20,7 +20,8 @@
 - [Preview](#preview)
 - [Introduction](#introduction)
 - [Installation](#installation)
-  - [To show glyphs properly, please install nerdfonts first](#to-show-glyphs-properly-please-install-nerdfonts-first)
+  - [Prerequisites](#prerequisites)
+  - [Glyphs](#glyphs)
   - [Optional: Backup existing nvim config](#optional-backup-existing-nvim-config)
   - [Clone the repository](#clone-the-repository)
 - [Plugins and Lsps and Highlighting](#plugins-and-lsps-and-highlighting)
@@ -29,23 +30,37 @@
   - [Lsps](#lsps)
   - [Syntax highlighting](#syntax-highlighting)
 - [Keybindings 🎥](#keybindings-🎥)
+  - [Basic](#basic)
 <!--toc:end-->
 
 ## Introduction
 
-This repo is to setup a modern IDE for coding in neovim **(Works on both macOS and Linux)**
+This repo is to setup a modern IDE style coding experience in Neovim. It has been tested both on the latest macOS and Debian GNU/Linux 12(Bookworm).
 
-- VSCode-like Auto-completion setup
-- Plugin Manager: [Lazy.nvim](https://github.com/folke/lazy.nvim)
-- Mason for native neovim LSP management
-- Tree-sitter for highlighting
-- Plugins: Lspsaga, Barbar, Lualine, Nvim-tree, Nvim-cmp, Todotree, Neogit ...
-- **[Neovide](https://neovide.dev/) recommended**
-- Font recommend: [JetBrainsMono](https://www.jetbrains.com/lp/mono/) Nerd Font Mono
+- Features:
+    - VSCode-like Auto-completion setup
+    - Plugin Manager: [Lazy.nvim](https://github.com/folke/lazy.nvim)
+    - Mason for native Neovim LSP management
+    - Tree-sitter for syntax highlighting
+    - Plugins: Lspsaga, Barbar, Lualine, Nvim-tree, Nvim-cmp, Todotree, Neogit ...
+    - **[Neovide](https://neovide.dev/) recommended** for much smoother GUI animation
 
 ## Installation
 
-### To show glyphs properly, please install nerdfonts first
+### Prerequisites
+
+- Neovim >= 0.9.0
+- CMake
+- Make
+- fzf
+- riggrep
+- fd
+- node
+- python3
+
+### Glyphs
+
+To show glyphs properly, please install Nerd Fonts first, and set your terminal to use it
 
 - https://www.nerdfonts.com/
 
