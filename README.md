@@ -26,7 +26,7 @@
   - [Clone the repository](#clone-the-repository)
 - [Plugins and Lsps and Highlighting](#plugins-and-lsps-and-highlighting)
   - [Plugins](#plugins)
-  - [***The most important***](#the-most-important)
+  - [**Initialization**](#initialization)
   - [Lsps](#lsps)
   - [Syntax highlighting](#syntax-highlighting)
 - [Keybindings 🎥](#keybindings-🎥)
@@ -86,25 +86,26 @@ git clone --depth 1 https://github.com/ye-junzhe/BetterNvim.git -b linux $HOME/.
 
 ### Plugins
 
-### ***The most important***
+### **Initialization**
 
-- Call `:Lazy` the first time you open nvim, and then press `U` to update all the plugins
-- Remember to call `:MasonUpdate` first time entering neovim, else there won't be any packages showing in the Mason panel
+- Enter `:Lazy`, then press `U` to update all the plugins
+- Enter `:MasonUpdate` else there won't be any packages showing in the Mason panel
+- Enter `TSUpdate` to update all Tree-sitter parsers
 
 ### Lsps
 
 - `:Mason` => Install Lsps(g? for help)
-- All configs in [this folder](https://github.com/ye-junzhe/BetterNvim/tree/master/lua/Junzhe/plugins/lsp)
+- All configs in [this folder](./lua/Junzhe/plugins/lsp/)
 - special setup for Rust development using rust-tools
 
 ### Syntax highlighting
 
 - `:TSInstall` => Install Tree-sitter highlighting for specific language
-- Configs in [treesitter.lua](https://github.com/ye-junzhe/BetterNvim/blob/master/lua/Junzhe/plugins/treesitter.lua)
+- Configs in [treesitter.lua](./lua/Junzhe/plugins/nvim-treesitter.lua)
 
 ## Keybindings 🎥
 
-Keybindings at [keymaps.lua](https://github.com/ye-junzhe/BetterNvim/blob/master/lua/Junzhe/core/keymaps.lua)
+Keybindings at [keymaps.lua](./lua/Junzhe/core/keymaps.lua)
 And the rest of are in the corresponding *.lua file of the plugin
 
 `<D->` = `Command` on macOS
@@ -137,7 +138,8 @@ gf => Find definition and references
 Shift+h => Switch left
 Shift+l => Switch right
 mp => BufferPick
-ctrl-p => BufferCloseAllButCurrentOrPinned
+ctrl-p => BufferPin
+ctrl-c => BufferCloseAllButCurrentOrPinned
 
 # Navigation
 ctrl + h/j/k/l => navigate windows
