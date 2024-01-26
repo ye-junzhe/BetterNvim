@@ -53,7 +53,7 @@ This repo is to setup a modern IDE style coding experience in Neovim. It has bee
 - CMake
 - Make
 - fzf
-- riggrep
+- ripgrep
 - fd
 - node
 - python3
