@@ -31,6 +31,6 @@ return {
         })
         vim.keymap.set("n", "<leader>dw", ":Lspsaga show_workspace_diagnostics<CR>")
         vim.keymap.set("n", "<leader>db", ":Lspsaga show_buf_diagnostics<CR>")
-        vim.keymap.set("n", "<leader>t", ":Lspsaga term_toggle<CR>")
+        vim.keymap.set({'n','t'}, '<C-t>', '<cmd>Lspsaga term_toggle<CR>')
     end,
 }
