@@ -130,7 +130,7 @@ gd => Definition(In definition window, o/i => edit)
 gf => Find definition and references
 <leader>oo => show symbols(silimar to tagbar)
 <leader>a => Code actions
-<leader>t => Terminal
+<leader>t(open)/tt(close) => Float Term
 <leader>dw => Work space diagnostics
 <leader>db => Buf diagnostics
 
