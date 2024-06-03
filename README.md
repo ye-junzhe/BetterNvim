@@ -49,7 +49,7 @@ This repo is to setup a modern IDE style coding experience in Neovim. It has bee
 
 ### Prerequisites
 
-- Neovim >= 0.9.0
+- Neovim >= 0.10.0
 - CMake
 - Make
 - fzf
