@@ -96,7 +96,7 @@ git clone --depth 1 https://github.com/ye-junzhe/BetterNvim.git -b linux $HOME/.
 
 - `:Mason` => Install Lsps(g? for help)
 - All configs in [this folder](./lua/Junzhe/plugins/lsp/)
-- special setup for Rust development using rust-tools
+- Mainly focusing on Rust development
 
 ### Syntax highlighting
 

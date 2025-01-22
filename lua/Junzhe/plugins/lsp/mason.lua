@@ -26,7 +26,7 @@ return {
         mason_lspconfig.setup({
             -- list of servers for mason to install
             ensure_installed = {
-                "tsserver",
+                "ts_ls",
                 "html",
                 "cssls",
                 "lua_ls",
@@ -34,14 +34,20 @@ return {
                 "jsonls",
                 -- "clangd",
                 -- "omnisharp_mono",
-                "rust_analyzer",
+                -- "rust_analyzer", -- Migrated to rustaceanvim now, no need to install rust-analyzer from here
                 "yamlls",
                 "taplo",
                 "marksman",
             },
             -- auto-install configured servers (with lspconfig)
             automatic_installation = true, -- not the same as ensure_installed
+
+            -- General approach to prevent mason-lspconfig from setting up rust-analyzer
         })
+
+        mason_lspconfig.setup_handlers = {
+            ['rust_analyzer'] = function() end,
+        }
 
         mason_tool_installer.setup({
             ensure_installed = {
