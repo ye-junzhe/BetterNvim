@@ -1,10 +1,35 @@
 return {
     "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        rust_analyzer = {},
+        taplo = {
+          keys = {
+            {
+              "K",
+              function()
+                if vim.fn.expand("%:t") == "Cargo.toml" and require("crates").popup_available() then
+                  require("crates").show_popup()
+                else
+                  vim.lsp.buf.hover()
+                end
+              end,
+              desc = "Show Crate Documentation",
+            },
+          },
+        },
+      },
+      setup = {
+        rust_analyzer = function()
+          return true
+        end,
+      },
+    },
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
         "hrsh7th/cmp-nvim-lsp",
         { "antosha417/nvim-lsp-file-operations", config = true },
-        "simrat39/rust-tools.nvim",
+        { 'mrcjkb/rustaceanvim', lazy = false },
     },
 
     config = function()
@@ -96,7 +121,7 @@ return {
         })
 
         -- configure typescript server with plugin
-        lspconfig["tsserver"].setup({
+        lspconfig["ts_ls"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
         })

@@ -49,7 +49,7 @@ This repo is to setup a modern IDE style coding experience in Neovim. It has bee
 
 ### Prerequisites
 
-- Neovim >= 0.9.0
+- Neovim >= 0.10.0
 - CMake
 - Make
 - fzf
@@ -96,7 +96,7 @@ git clone --depth 1 https://github.com/ye-junzhe/BetterNvim.git -b linux $HOME/.
 
 - `:Mason` => Install Lsps(g? for help)
 - All configs in [this folder](./lua/Junzhe/plugins/lsp/)
-- special setup for Rust development using rust-tools
+- Mainly focusing on Rust development
 
 ### Syntax highlighting
 
@@ -130,7 +130,7 @@ gd => Definition(In definition window, o/i => edit)
 gf => Find definition and references
 <leader>oo => show symbols(silimar to tagbar)
 <leader>a => Code actions
-<leader>t(open)/tt(close) => Float Term
+<leader>t(open)/tt(close) || ctrl-t => Float Term
 <leader>dw => Work space diagnostics
 <leader>db => Buf diagnostics
 
