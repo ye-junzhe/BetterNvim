@@ -137,6 +137,8 @@ gf => Find definition and references
 # Barbar
 Shift+h => Switch left
 Shift+l => Switch right
+Shift+f => Switch buffer forword
+Shift+b => Switch buffer backword
 mp => BufferPick
 ctrl-p => BufferPin
 ctrl-c => BufferCloseAllButCurrentOrPinned
