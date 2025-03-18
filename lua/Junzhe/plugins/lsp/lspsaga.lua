@@ -29,6 +29,7 @@ return {
                 folder_level = 0,
             },
         })
+        -- ISSUE: Workdspace and buf diagnostics doesn't work, wonder why
         vim.keymap.set("n", "<leader>dw", ":Lspsaga show_workspace_diagnostics<CR>")
         vim.keymap.set("n", "<leader>db", ":Lspsaga show_buf_diagnostics<CR>")
         vim.keymap.set('n', '<leader>t', '<cmd>Lspsaga term_toggle<CR>')

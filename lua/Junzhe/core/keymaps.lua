@@ -51,14 +51,8 @@ keymap.set("n", "<C-g>", ":echo expand('%:p')<CR>")
 -- Plugin Keybinds
 ----------------------
 
--- Tagbar
--- keymap.set("n", "<leader>q", ":TagbarToggle<CR>")
-
 -- diffview
 keymap.set("n", "<leader>fd", ":DiffviewFileHistory<CR>")
-
--- lazygit
-keymap.set("n", "<leader>lg", ":LazyGit<CR>")
 
 -- open register
 vim.keymap.set("n", "<leader>fg", ":registers<CR>")
