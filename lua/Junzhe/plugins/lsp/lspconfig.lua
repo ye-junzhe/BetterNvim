@@ -39,7 +39,7 @@ return {
         -- import cmp-nvim-lsp plugin
         local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
-        local keymap = vim.keymap -- for conciseness
+        local on_attach = function (_, _) end
 
         local opts = { noremap = true, silent = true }
         local on_attach = function(client, bufnr)
@@ -88,6 +88,8 @@ return {
             keymap.set("n", "gH", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
             opts.desc = "Show Lspsaga documentation for what is under cursor"
             keymap.set("n", "gh", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
+            -- prevent lsps like marksman from activating in hover_doc
+            client.server_capabilities.textDocumentHover = nil
 
             -- diagnostics
             opts.desc = "Show buffer diagnostics"
@@ -107,7 +109,6 @@ return {
         local capabilities = cmp_nvim_lsp.default_capabilities()
 
         -- Change the Diagnostic symbols in the sign column (gutter)
-        -- (not in youtube nvim video)
         local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
         for type, icon in pairs(signs) do
             local hl = "DiagnosticSign" .. type
@@ -142,7 +143,9 @@ return {
 
         lspconfig["marksman"].setup({
             capabilities = capabilities,
-            on_attach = on_attach,
+            on_attach = function(client, _)
+                client.server_capabilities.hoverProvider = false
+            end,
         })
 
         -- configure lua server (with special settings)
