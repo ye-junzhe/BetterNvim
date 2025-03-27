@@ -116,6 +116,10 @@ And the rest of are in the corresponding *.lua file of the plugin
 
 ```bash
 <leader>e => nvim-tree (g? for help)
+i => Change directory
+I => Chanege to the parent folder
+o => Unfold
+O => Fold
 
 # Telescope
 <leader>ff => File search

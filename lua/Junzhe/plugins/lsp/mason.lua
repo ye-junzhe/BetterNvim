@@ -33,7 +33,6 @@ return {
                 "jedi_language_server",
                 "jsonls",
                 -- "clangd",
-                -- "omnisharp_mono",
                 -- "rust_analyzer", -- Migrated to rustaceanvim now, no need to install rust-analyzer from here
                 "yamlls",
                 "taplo",

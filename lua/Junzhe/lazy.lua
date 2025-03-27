@@ -15,7 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({ { import = "Junzhe.plugins" }, { import = "Junzhe.plugins.lsp" } }, {
     install = {
         missing = true,
-        colorscheme = { "nightfly" },
+        colorscheme = { "catppuccin-mocha" }
     },
     checker = {
         enabled = true,
