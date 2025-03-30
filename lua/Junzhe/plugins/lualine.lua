@@ -178,7 +178,7 @@ return {
             local distro
             local file = io.open("/etc/os-release", "r")
             local distro_icons = {
-                ubuntu = "",
+                ubuntu = "",
                 debian = "",
                 arch = "",
                 fedora = "",
@@ -191,14 +191,16 @@ return {
             for line in file:lines() do
                 local key, value = line:match("^(.-)=[\"']?(.-)[\"']?$")
                 if key == "ID" then
-                    file:close()
                     distro = value
+                    break
                 end
             end
             file:close()
-            return distro_icons[distro]
+            if not distro then
+                return distro_icons.unknown
+            end
+            return distro_icons[distro] or distro_icons.unknown
         end
-
 
         ins_right({
             "fileformat",

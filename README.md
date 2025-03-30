@@ -54,9 +54,11 @@ This repo is to setup a modern IDE style coding experience in Neovim. It has bee
 - Make
 - fzf
 - ripgrep
-- fd
+- fd-find
 - node
 - python3
+- tree-sitter-cli (Linux)
+- ctags (Then set your ctags bin in ./lua/Junzhe/core/options.lua:43)
 
 ### Glyphs
 
