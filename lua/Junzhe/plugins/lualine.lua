@@ -172,10 +172,41 @@ return {
         --     color = { fg = colors.blue, gui = "bold" },
         -- })
 
+        -- Determine Linux Distro
+
+        local function get_linux_distro()
+            local distro
+            local file = io.open("/etc/os-release", "r")
+            local distro_icons = {
+                ubuntu = "",
+                debian = "",
+                arch = "",
+                fedora = "",
+                opensuse = "",
+                unknown = ""
+            }
+            if not file then
+                return distro_icons.unknown
+            end
+            for line in file:lines() do
+                local key, value = line:match("^(.-)=[\"']?(.-)[\"']?$")
+                if key == "ID" then
+                    distro = value
+                    break
+                end
+            end
+            file:close()
+            if not distro then
+                return distro_icons.unknown
+            end
+            return distro_icons[distro] or distro_icons.unknown
+        end
+
         ins_right({
             "fileformat",
             symbols = {
-                unix = "Mc", -- e711
+                -- unix = "Mc", -- e711
+                unix = get_linux_distro(),
                 dos = "", -- e70f
             },
             color = { fg = colors.pink , gui = 'bold' },

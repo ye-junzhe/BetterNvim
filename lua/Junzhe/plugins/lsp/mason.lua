@@ -32,8 +32,8 @@ return {
                 "lua_ls",
                 "jedi_language_server",
                 "jsonls",
-                -- "clangd",
-                -- "rust_analyzer", -- Migrated to rustaceanvim now, no need to install rust-analyzer from here
+                "clangd",
+                "rust_analyzer",
                 "yamlls",
                 "taplo",
                 "marksman",
