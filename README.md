@@ -77,12 +77,6 @@ mv $HOME/.config/nvim $HOME/.config/nvim.old
 git clone --depth 1 https://github.com/ye-junzhe/BetterNvim.git $HOME/.config/nvim
 ```
 
-- **IF ON LINUX**
-
-```bash
-git clone --depth 1 https://github.com/ye-junzhe/BetterNvim.git -b linux $HOME/.config/nvim
-```
-
 ## Plugins and Lsps and Highlighting
 
 ### Plugins
