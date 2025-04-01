@@ -174,17 +174,29 @@ return {
 
         -- Determine Linux Distro
 
-        local function get_linux_distro()
+        local function get_unix_distro()
             local distro
-            local file = io.open("/etc/os-release", "r")
             local distro_icons = {
                 ubuntu = "",
                 debian = "",
                 arch = "",
                 fedora = "",
                 opensuse = "",
-                unknown = ""
+                unknown = "",
+                macOS = "Mc"
             }
+
+            local handle = io.popen("uname", "r")
+            if handle then
+                local result = handle:read("*a"):match("^%s*(.-)%s*$") -- Trim whitespace
+                handle:close()
+                if result == "Darwin" then
+                    distro = "macOS"
+                    return distro_icons[distro]
+                end
+            end
+
+            local file = io.open("/etc/os-release", "r")
             if not file then
                 return distro_icons.unknown
             end
@@ -205,8 +217,7 @@ return {
         ins_right({
             "fileformat",
             symbols = {
-                -- unix = "Mc", -- e711
-                unix = get_linux_distro(),
+                unix = get_unix_distro(),
                 dos = "", -- e70f
             },
             color = { fg = colors.pink , gui = 'bold' },
