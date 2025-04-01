@@ -18,6 +18,14 @@ local colorschemes = {
             vim.cmd([[
                 colorscheme catppuccin-mocha
 
+                " Enable transparency
+                highlight Normal guibg=NONE ctermbg=NONE
+                highlight NormalNC guibg=NONE ctermbg=NONE
+                highlight LineNr guibg=NONE ctermbg=NONE
+                highlight SignColumn guibg=NONE ctermbg=NONE
+                highlight FoldColumn guibg=NONE ctermbg=NONE
+                highlight CursorLine guibg=NONE ctermbg=NONE
+                
                 " For nvim tree
                 highlight NvimTreeIndentMarker guifg=#A6E3A1
                 highlight NvimTreeFolderArrowClosed guifg=#A6E3A1
