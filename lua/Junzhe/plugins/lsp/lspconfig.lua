@@ -65,6 +65,12 @@ return {
             single_file_support = false
         })
 
+        lspconfig["svelte"].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+            single_file_support = true
+        })
+
         -- configure css server
         lspconfig["cssls"].setup({
             capabilities = capabilities,
