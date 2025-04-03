@@ -77,6 +77,14 @@ mv $HOME/.config/nvim $HOME/.config/nvim.old
 git clone --depth 1 https://github.com/ye-junzhe/BetterNvim.git $HOME/.config/nvim
 ```
 
+### Additional step for Linux
+
+If nvim is installed from source, set a hard link to /usr/bin, for sudoers to find it
+
+```
+ln /path/to/nvim /usr/bin/nvim
+```
+
 ## Plugins and Lsps and Highlighting
 
 ### Plugins
