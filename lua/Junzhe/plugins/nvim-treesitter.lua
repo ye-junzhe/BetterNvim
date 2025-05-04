@@ -4,7 +4,7 @@ return {
     build = ":TSUpdate",
     dependencies = {
         "windwp/nvim-ts-autotag",
-        "p00f/nvim-ts-rainbow",
+        "HiPhish/rainbow-delimiters.nvim",
     },
     config = function()
         -- import nvim-treesitter plugin
