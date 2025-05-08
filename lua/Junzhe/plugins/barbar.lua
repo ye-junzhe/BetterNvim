@@ -65,60 +65,65 @@ return {
         })
 
         vim.cmd([[
-                " For barbar
-                highlight BufferTabpageFill guibg=NONE
-                " highlight BufferTabpages guibg=NONE
-                highlight BufferTabpagesSep guibg=NONE
-                " barbar - current buffer
-                highlight BufferCurrent guibg=NONE guifg=#A6E3A1
-                highlight BufferCurrentADDED guibg=NONE
-                highlight BufferCurrentCHANGED guibg=NONE
-                highlight BufferCurrentDELETED guibg=NONE
-                highlight BufferCurrentERROR guibg=NONE guifg=#F38BA8
-                highlight BufferCurrentWARN guibg=NONE guifg=#F9E2AF
-                highlight BufferCurrentHINT guibg=NONE guifg=#A6E3A1
-                " highlight BufferCurrentIcon guibg=NONE
-                highlight BufferCurrentIndex guibg=NONE
-                " highlight BufferCurrentINFO guibg=NONE
-                highlight BufferCurrentMod guibg=NONE guifg=#A6E3A1
-                highlight BufferCurrentNumber guibg=NONE
-                highlight BufferCurrentSign guibg=NONE
-                highlight BufferCurrentSignRight guibg=NONE
-                highlight BufferCurrentTarget guibg=NONE
+            " highlight TabLine guibg=NONE ctermbg=NONE
+            highlight TabLineFill guibg=NONE ctermbg=NONE
+            " highlight TabLineSel guibg=NONE ctermbg=NONE
+            " For barbar
+            highlight BufferTabpageFill guibg=NONE ctermbg=NONE
+            " highlight BufferTabpages guibg=NONE ctermbg=NONE
+            highlight BufferTabpagesSep guibg=NONE ctermbg=NONE
+            highlight BufferOffset guibg=NONE ctermbg=NONE
+            highlight BufferScrollArrow guibg=NONE ctermbg=NONE
+            " barbar - current buffer
+            highlight BufferCurrent guibg=NONE guifg=#A6E3A1 ctermbg=NONE
+            highlight BufferCurrentADDED guibg=NONE ctermbg=NONE
+            highlight BufferCurrentCHANGED guibg=NONE ctermbg=NONE
+            highlight BufferCurrentDELETED guibg=NONE ctermbg=NONE
+            highlight BufferCurrentERROR guibg=NONE guifg=#F38BA8 ctermbg=NONE
+            highlight BufferCurrentWARN guibg=NONE guifg=#F9E2AF ctermbg=NONE
+            highlight BufferCurrentHINT guibg=NONE guifg=#A6E3A1 ctermbg=NONE
+            " highlight BufferCurrentIcon guibg=NONE ctermbg=NONE
+            highlight BufferCurrentIndex guibg=NONE ctermbg=NONE
+            " highlight BufferCurrentINFO guibg=NONE ctermbg=NONE
+            highlight BufferCurrentMod guibg=NONE guifg=#A6E3A1 ctermbg=NONE
+            highlight BufferCurrentNumber guibg=NONE ctermbg=NONE
+            highlight BufferCurrentSign guibg=NONE ctermbg=NONE
+            highlight BufferCurrentSignRight guibg=NONE ctermbg=NONE
+            highlight BufferCurrentTarget guibg=NONE ctermbg=NONE
 
-                " barbar - inactive buffer
-                highlight BufferInactive guibg=NONE
-                highlight BufferInactiveADDED guibg=NONE
-                highlight BufferInactiveCHANGED guibg=NONE
-                highlight BufferInactiveDELETED guibg=NONE
-                highlight BufferInactiveERROR guibg=NONE
-                highlight BufferInactiveHINT guibg=NONE
-                highlight BufferInactiveIcon guibg=NONE
-                highlight BufferInactiveIndex guibg=NONE
-                highlight BufferInactiveINFO guibg=NONE
-                highlight BufferInactiveMod guibg=NONE
-                highlight BufferInactiveNumber guibg=NONE
-                highlight BufferInactiveSign guibg=NONE
-                highlight BufferInactiveSignRight guibg=NONE
-                highlight BufferInactiveTarget guibg=NONE
-                highlight BufferInactiveWARN guibg=NONE
+            " barbar - inactive buffer
+            highlight BufferInactive guibg=NONE ctermbg=NONE
+            highlight BufferInactiveADDED guibg=NONE ctermbg=NONE
+            highlight BufferInactiveCHANGED guibg=NONE ctermbg=NONE
+            highlight BufferInactiveDELETED guibg=NONE ctermbg=NONE
+            highlight BufferInactiveERROR guibg=NONE ctermbg=NONE
+            highlight BufferInactiveHINT guibg=NONE ctermbg=NONE
+            highlight BufferInactiveIcon guibg=NONE ctermbg=NONE
+            highlight BufferInactiveIndex guibg=NONE ctermbg=NONE
+            highlight BufferInactiveINFO guibg=NONE ctermbg=NONE
+            highlight BufferInactiveMod guibg=NONE ctermbg=NONE
+            highlight BufferInactiveNumber guibg=NONE ctermbg=NONE
+            highlight BufferInactiveSign guibg=NONE ctermbg=NONE
+            highlight BufferInactiveSignRight guibg=NONE ctermbg=NONE
+            highlight BufferInactiveTarget guibg=NONE ctermbg=NONE
+            highlight BufferInactiveWARN guibg=NONE ctermbg=NONE
 
-                " highlight BufferVisible          guibg=NONE
-                " highlight BufferVisibleADDED     guibg=NONE
-                " highlight BufferVisibleCHANGED   guibg=NONE
-                " highlight BufferVisibleDELETED   guibg=NONE
-                " highlight BufferVisibleERROR     guibg=NONE
-                " highlight BufferVisibleHINT      guibg=NONE
-                " highlight BufferVisibleIcon      guibg=NONE
-                " highlight BufferVisibleIndex     guibg=NONE
-                " highlight BufferVisibleINFO      guibg=NONE
-                " highlight BufferVisibleMod       guibg=NONE
-                " highlight BufferVisibleNumber    guibg=NONE
-                " highlight BufferVisibleSign      guibg=NONE
-                " highlight BufferVisibleSignRight guibg=NONE
-                " highlight BufferVisibleTarget    guibg=NONE
-                " highlight BufferVisibleWARN      guibg=NONE
+            highlight BufferVisible          guibg=NONE ctermbg=NONE
+            highlight BufferVisibleADDED     guibg=NONE ctermbg=NONE
+            highlight BufferVisibleCHANGED   guibg=NONE ctermbg=NONE
+            highlight BufferVisibleDELETED   guibg=NONE ctermbg=NONE
+            highlight BufferVisibleERROR     guibg=NONE ctermbg=NONE
+            highlight BufferVisibleHINT      guibg=NONE ctermbg=NONE
+            highlight BufferVisibleIcon      guibg=NONE ctermbg=NONE
+            highlight BufferVisibleIndex     guibg=NONE ctermbg=NONE
+            highlight BufferVisibleINFO      guibg=NONE ctermbg=NONE
+            highlight BufferVisibleMod       guibg=NONE ctermbg=NONE
+            highlight BufferVisibleNumber    guibg=NONE ctermbg=NONE
+            highlight BufferVisibleSign      guibg=NONE ctermbg=NONE
+            highlight BufferVisibleSignRight guibg=NONE ctermbg=NONE
+            highlight BufferVisibleTarget    guibg=NONE ctermbg=NONE
+            highlight BufferVisibleWARN      guibg=NONE ctermbg=NONE
 
-                ]])
+            ]])
     end,
 }
