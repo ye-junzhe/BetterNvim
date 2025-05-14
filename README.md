@@ -35,7 +35,12 @@
 
 ## Introduction
 
-This repo is to setup a modern IDE style coding experience in Neovim. It has been tested both on the latest macOS and Debian GNU/Linux 12(Bookworm).
+This repo is to setup a modern IDE style coding experience in Neovim.
+
+- Supported OS
+    - macOS(Tested on the latest macOS)
+    - GNU/Linux(Tested on Debian 12 Bookworm)
+    - Windows Subsystem for Linux(Tested on WSL Ubuntu)
 
 - Features:
     - VSCode-like Auto-completion setup
@@ -49,7 +54,7 @@ This repo is to setup a modern IDE style coding experience in Neovim. It has bee
 
 ### Prerequisites
 
-- Neovim >= 0.10.0 (Neovim 0.11 breaks tree-sitter **DO NOT UPGRADE**)
+- Neovim >= 0.10.0
 - CMake
 - Make
 - fzf
@@ -79,7 +84,7 @@ git clone --depth 1 https://github.com/ye-junzhe/BetterNvim.git $HOME/.config/nv
 
 ### Additional step for Linux
 
-If nvim is installed from source, set a hard link to /usr/bin, for sudoers to find it
+If Neovim on your machine is compiled from source, set a hard link to /usr/bin, for sudoers to find it
 
 ```
 ln /path/to/nvim /usr/bin/nvim
