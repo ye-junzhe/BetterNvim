@@ -177,7 +177,7 @@ return {
         local function get_unix_distro()
             local distro
             local distro_icons = {
-                ubuntu = "",
+                ubuntu = "",
                 debian = "",
                 arch = "",
                 fedora = "",
