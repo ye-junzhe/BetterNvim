@@ -34,6 +34,24 @@ opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or 
 -- clipboard
 opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 
+-- WSL: route the system clipboard (+/*) through win32yank.exe so that yanking
+-- inside WSL Neovim also fills the Windows clipboard (and pasting reads from it).
+local win32yank = vim.fn.expand("~/.local/bin/win32yank.exe")
+if vim.fn.has("wsl") == 1 and vim.fn.executable(win32yank) == 1 then
+  vim.g.clipboard = {
+    name = "win32yank-wsl",
+    copy = {
+      ["+"] = win32yank .. " -i --crlf",
+      ["*"] = win32yank .. " -i --crlf",
+    },
+    paste = {
+      ["+"] = win32yank .. " -o --lf",
+      ["*"] = win32yank .. " -o --lf",
+    },
+    cache_enabled = 0,
+  }
+end
+
 -- split windows
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
